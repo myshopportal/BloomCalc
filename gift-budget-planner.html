@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Christmas Gift Budget Planner: Free Holiday Gift Calculator | BloomCalc</title>
+<meta name="description" content="Free holiday gift budget planner. Set your total Christmas budget, split it by person, and track what you've spent so you don't overspend. Saved on your device.">
+<link rel="canonical" href="https://www.bloomcalc.com/gift-budget-planner.html">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BloomCalc">
+<meta property="og:title" content="Christmas Gift Budget Planner: Free Holiday Gift Calculator | BloomCalc">
+<meta property="og:description" content="Free holiday gift budget planner. Set your total Christmas budget, split it by person, and track what you've spent so you don't overspend. Saved on your device.">
+<meta property="og:url" content="https://www.bloomcalc.com/gift-budget-planner.html">
+<meta name="theme-color" content="#fbf6f0">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much should I spend on Christmas gifts?", "acceptedAnswer": {"@type": "Answer", "text": "There's no right number. Start with what you can pay without debt, then split it by person. Many people set a bigger amount for close family and a small fixed amount for friends, teachers and coworkers."}}, {"@type": "Question", "name": "How do I stick to my gift budget?", "acceptedAnswer": {"@type": "Answer", "text": "Write your list before you shop, give each person a set amount, and update what you spent as you buy. Shopping sales like Black Friday helps your money go further."}}, {"@type": "Question", "name": "Is my list saved?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Your list is saved only in this browser on this device, so you can come back to it. We never see it. If you clear your browser data or use private browsing, it won't be kept."}}]}</script>
+</head>
+<body>
+<header class="site-head"><div class="head-in">
+  <a class="logo" href="/"><svg viewBox="0 0 32 32" aria-hidden="true"><g fill="#b0305a"><circle cx="16" cy="8.5" r="5.5"/><circle cx="23.5" cy="16" r="5.5"/><circle cx="16" cy="23.5" r="5.5"/><circle cx="8.5" cy="16" r="5.5"/></g><circle cx="16" cy="16" r="4.6" fill="#e8a33d"/><path d="M13.6 16h4.8M16 13.6v4.8" stroke="#2b1d2a" stroke-width="1.6" stroke-linecap="round"/></svg><span>Bloom<b>Calc</b></span></a>
+  <nav class="nav" aria-label="Main"><a href="/">All tools</a><a href="/christmas-countdown.html">🎄 Christmas</a><a href="/turkey-calculator.html">🦃 Turkey</a><a href="/gift-budget-planner.html" aria-current="page">🎁 Gift budget</a></nav>
+</div></header>
+<main>
+<div class="narrow">
+  <div class="crumbs"><a href="/">BloomCalc</a> › Gift budget planner</div>
+  <section class="page-hero">
+    <span class="eyebrow">Holiday money</span>
+    <h1>Gift budget planner</h1>
+    <p class="lead">Set your total budget, give everyone on your list an amount, and track what you spend. No overspending surprises in January.</p>
+  </section>
+
+  <div class="card tool">
+    <div class="fields">
+      <div class="full"><label for="total">Total gift budget ($)</label><input id="total" type="number" inputmode="decimal" min="0" placeholder="e.g. 600"></div>
+    </div>
+    <h3 style="margin:20px 0 8px">Your list</h3>
+    <div id="people"></div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px">
+      <button class="btn ghost" type="button" id="add">+ Add person</button>
+      <button class="btn ghost" type="button" id="split">Split budget evenly</button>
+    </div>
+    <div class="stats" style="margin-top:18px" aria-live="polite">
+      <div class="stat hero"><b id="g-left">$0</b><span id="g-left-lbl">left to spend</span></div>
+      <div class="stat"><b id="g-plan">$0</b><span>planned</span></div>
+      <div class="stat"><b id="g-spent">$0</b><span>spent so far</span></div>
+    </div>
+    <p class="note" id="g-msg"></p>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:6px">
+      <button class="btn ghost" type="button" id="print">🖨️ Print list</button>
+      <button class="btn ghost" type="button" id="reset">Start over</button>
+    </div>
+    <p class="note">Your list is saved only on this device.</p>
+  </div>
+
+  <div class="content">
+    <h2>Need gift ideas?</h2>
+    <p>Browse ideas by person and price on <a href="https://www.myshopportal.com/gifts.html" target="_blank" rel="noopener">ShopPortal's holiday gift guide</a>, and compare prices across stores during <a href="https://www.myshopportal.com/blackfriday.html" target="_blank" rel="noopener">Black Friday</a>.</p>
+
+    <h2>Tips to stay on budget</h2>
+    <ul>
+      <li><b>Set the total first,</b> then divide it. It's much easier than adding up as you go.</li>
+      <li><b>Use tiers:</b> a bigger amount for close family, a fixed small amount (like $15) for friends, teachers and coworkers.</li>
+      <li><b>Don't forget the extras:</b> wrapping paper, cards and shipping can add up to 10% more.</li>
+      <li><b>Track every buy</b> right away, even small ones.</li>
+      <li><b>Try a family gift swap</b> (Secret Santa) if your list is long.</li>
+    </ul>
+
+    <h2>Wrap it up</h2>
+    <div class="shop"><div class="shop-item"><b>Gift wrap set</b><span>Paper, ribbons and tags together.</span><a href="https://www.amazon.com/s?k=christmas+gift+wrap+set&tag=sukhleenkau0b-20" target="_blank" rel="sponsored noopener">See on Amazon →</a></div><div class="shop-item"><b>Gift bags</b><span>Fast wrapping for odd shapes.</span><a href="https://www.amazon.com/s?k=christmas+gift+bags+assorted&tag=sukhleenkau0b-20" target="_blank" rel="sponsored noopener">See on Amazon →</a></div><div class="shop-item"><b>Stocking stuffers</b><span>Small gifts under $10.</span><a href="https://www.amazon.com/s?k=stocking+stuffers+under+10&tag=sukhleenkau0b-20" target="_blank" rel="sponsored noopener">See on Amazon →</a></div></div><p class="disclose">As an Amazon Associate, BloomCalc earns from qualifying purchases. This doesn't change the price you pay.</p>
+
+    <h2>FAQ</h2>
+    <details><summary>How much should I spend on Christmas gifts?</summary><p>There's no right number. Start with what you can pay without debt, then split it by person. Many people set a bigger amount for close family and a small fixed amount for friends, teachers and coworkers.</p></details><details><summary>How do I stick to my gift budget?</summary><p>Write your list before you shop, give each person a set amount, and update what you spent as you buy. Shopping sales like Black Friday helps your money go further.</p></details><details><summary>Is my list saved?</summary><p>Yes. Your list is saved only in this browser on this device, so you can come back to it. We never see it. If you clear your browser data or use private browsing, it won't be kept.</p></details>
+  </div>
+  <h2>More free tools</h2><div class="related"><a class="tile" href="/christmas-countdown.html"><div class="ico berry">🎄</div><h3>Days Until Christmas</h3><p>Live countdown to Christmas, plus Thanksgiving, Black Friday and New Year.</p></a><a class="tile" href="/turkey-calculator.html"><div class="ico gold">🦃</div><h3>Turkey Calculator</h3><p>What size turkey to buy, how long to thaw it, and when it goes in the oven.</p></a></div>
+</div>
+</main>
+<footer class="site-foot"><div class="foot-in">
+  <div>© 2026 BloomCalc · Free, simple calculators for everyday life.</div>
+  <nav aria-label="Footer"><a href="/about.html">About</a><a href="/privacy.html">Privacy</a><a href="https://www.myshopportal.com/" target="_blank" rel="noopener">Deals: ShopPortal</a></nav>
+</div></footer>
+<style>
+.person{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr) minmax(0,1fr) 40px;gap:8px;align-items:end;margin-bottom:10px}
+.person label{font-size:12px;font-weight:600;color:var(--muted);margin-bottom:3px}
+.person .del{border:0;background:var(--blush);color:var(--berry-dk);width:40px;height:46px;border-radius:12px;font-size:18px;cursor:pointer}
+.over b{color:#ffb4a8!important}
+@media (max-width:520px){.person{grid-template-columns:minmax(0,1fr) minmax(0,1fr) 40px}.person .nm{grid-column:1/-1}}
+@media print{.site-head,.site-foot,.content,.related,.crumbs,.page-hero .lead,.btn,.note{display:none!important}.card{box-shadow:none;border:0}}
+</style>
+<script>
+(function(){
+  var $=function(id){return document.getElementById(id)};
+  var KEY='bloomcalc-gift-budget-v1';
+  var state={total:'',people:[]};
+  try{var s=JSON.parse(localStorage.getItem(KEY)||'null');if(s&&Array.isArray(s.people))state=s}catch(e){}
+  if(!state.people.length)state.people=[{n:'',b:'',s:''},{n:'',b:'',s:''},{n:'',b:'',s:''}];
+  function save(){try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){}}
+  var money=function(n){return (n<0?'-':'')+'$'+Math.abs(n).toLocaleString('en-US',{minimumFractionDigits:0,maximumFractionDigits:2})};
+  function field(lbl,val,type,ph,key,i,cls){
+    var w=document.createElement('div');if(cls)w.className=cls;
+    var l=document.createElement('label');l.textContent=lbl;var id='p'+i+key;l.htmlFor=id;
+    var inp=document.createElement('input');inp.id=id;inp.type=type;inp.value=val;inp.placeholder=ph;
+    if(type==='number'){inp.inputMode='decimal';inp.min='0'}
+    inp.addEventListener('input',function(){state.people[i][key]=inp.value;save();totals()});
+    w.appendChild(l);w.appendChild(inp);return w;
+  }
+  function render(){
+    var box=$('people');box.innerHTML='';
+    state.people.forEach(function(p,i){
+      var row=document.createElement('div');row.className='person';
+      row.appendChild(field('Name',p.n,'text','e.g. Mom','n',i,'nm'));
+      row.appendChild(field('Budget $',p.b,'number','50','b',i));
+      row.appendChild(field('Spent $',p.s,'number','0','s',i));
+      var d=document.createElement('button');d.type='button';d.className='del';d.textContent='×';d.setAttribute('aria-label','Remove '+(p.n||'person'));
+      d.onclick=function(){state.people.splice(i,1);save();render()};
+      row.appendChild(d);box.appendChild(row);
+    });
+    totals();
+  }
+  function totals(){
+    var T=+state.total||0,plan=0,spent=0;
+    state.people.forEach(function(p){plan+=+p.b||0;spent+=+p.s||0});
+    var left=T-spent;
+    $('g-plan').textContent=money(plan);$('g-spent').textContent=money(spent);
+    $('g-left').textContent=money(Math.abs(left));
+    $('g-left-lbl').textContent=left<0?'over budget':'left to spend';
+    $('g-left').parentNode.classList.toggle('over',left<0);
+    var m='';
+    if(T&&plan>T)m='⚠️ Your planned gifts are '+money(plan-T)+' more than your total budget. Lower a few amounts, or raise the total.';
+    else if(T&&plan<T&&plan>0)m='You have '+money(T-plan)+' not yet given to anyone. Keep it for wrapping and extras.';
+    $('g-msg').textContent=m;
+  }
+  $('total').value=state.total;
+  $('total').addEventListener('input',function(){state.total=$('total').value;save();totals()});
+  $('add').onclick=function(){state.people.push({n:'',b:'',s:''});save();render();var ins=$('people').querySelectorAll('.nm input');ins[ins.length-1].focus()};
+  $('split').onclick=function(){
+    var T=+state.total||0,n=state.people.length;
+    if(!T||!n){$('g-msg').textContent='Enter your total budget and add at least one person first.';return}
+    var each=Math.floor(T/n*100)/100;state.people.forEach(function(p){p.b=String(each)});save();render();
+  };
+  $('print').onclick=function(){window.print()};
+  $('reset').onclick=function(){state={total:'',people:[{n:'',b:'',s:''},{n:'',b:'',s:''},{n:'',b:'',s:''}]};$('total').value='';save();render()};
+  render();
+})();
+</script>
+</body>
+</html>
