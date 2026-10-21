@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Age Calculator: Exact Age in Years, Months & Days | BloomCalc</title>
+<meta name="description" content="Free age calculator. Find your exact age in years, months and days, total days lived, the day of the week you were born, and how many days until your next birthday.">
+<link rel="canonical" href="https://www.bloomcalc.com/age-calculator.html">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BloomCalc">
+<meta property="og:title" content="Age Calculator: Exact Age in Years, Months & Days | BloomCalc">
+<meta property="og:description" content="Free age calculator. Find your exact age in years, months and days, total days lived, the day of the week you were born, and how many days until your next birthday.">
+<meta property="og:url" content="https://www.bloomcalc.com/age-calculator.html">
+<meta name="theme-color" content="#fbf6f0">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How is exact age calculated?", "acceptedAnswer": {"@type": "Answer", "text": "We count full years since your birth date, then the full months since your last birthday, then the days left over. That's the same way age is counted on forms."}}, {"@type": "Question", "name": "What if I was born on February 29?", "acceptedAnswer": {"@type": "Answer", "text": "In years without a February 29, we count your birthday as February 28. Some people celebrate on March 1 instead."}}, {"@type": "Question", "name": "Is my birth date saved?", "acceptedAnswer": {"@type": "Answer", "text": "No. The calculation happens in your browser, and nothing is sent or stored."}}]}</script>
+</head>
+<body>
+<header class="site-head"><div class="head-in">
+  <a class="logo" href="/"><svg viewBox="0 0 32 32" aria-hidden="true"><g fill="#b0305a"><circle cx="16" cy="8.5" r="5.5"/><circle cx="23.5" cy="16" r="5.5"/><circle cx="16" cy="23.5" r="5.5"/><circle cx="8.5" cy="16" r="5.5"/></g><circle cx="16" cy="16" r="4.6" fill="#e8a33d"/><path d="M13.6 16h4.8M16 13.6v4.8" stroke="#2b1d2a" stroke-width="1.6" stroke-linecap="round"/></svg><span>Bloom<b>Calc</b></span></a>
+  <nav class="nav" aria-label="Main"><a href="/">All tools</a><a href="/christmas-countdown.html">🎄 Christmas</a><a href="/turkey-calculator.html">🦃 Turkey</a><a href="/discount-calculator.html">🏷️ Discount</a><a href="/tip-calculator.html">🍽️ Tip</a><a href="/gift-budget-planner.html">🎁 Gift budget</a></nav>
+</div></header>
+<main>
+<div class="narrow">
+  <div class="crumbs"><a href="/">BloomCalc</a> › Age calculator</div>
+  <section class="page-hero">
+    <span class="eyebrow">Birthdays</span>
+    <h1>Age calculator</h1>
+    <p class="lead">Your exact age in years, months and days, plus a countdown to your next birthday.</p>
+  </section>
+  <div class="card tool">
+    <div class="fields">
+      <div><label for="dob">Date of birth</label><input id="dob" type="date" max="2100-12-31"></div>
+      <div><label for="on">Age on this date</label><input id="on" type="date"></div>
+    </div>
+    <p class="err" id="err" role="alert"></p>
+    <div class="result" id="res" aria-live="polite">
+      <div class="stats">
+        <div class="stat hero"><b id="g-age">–</b><span>exact age</span></div>
+        <div class="stat"><b id="g-next">–</b><span id="g-next-lbl">days to next birthday</span></div>
+        <div class="stat"><b id="g-born">–</b><span>day you were born</span></div>
+        <div class="stat"><b id="g-days">–</b><span>days lived</span></div>
+        <div class="stat"><b id="g-weeks">–</b><span>weeks lived</span></div>
+      </div>
+      <p class="note" id="g-note"></p>
+    </div>
+  </div>
+  <div class="content">
+    <h2>Fun ways to use it</h2>
+    <ul>
+      <li>Count down to a birthday and plan the party.</li>
+      <li>Check a child's exact age in months for milestones or school forms.</li>
+      <li>Find out the day of the week you were born. Monday's child or Friday's?</li>
+    </ul>
+    <h2>FAQ</h2>
+    <details><summary>How is exact age calculated?</summary><p>We count full years since your birth date, then the full months since your last birthday, then the days left over. That's the same way age is counted on forms.</p></details><details><summary>What if I was born on February 29?</summary><p>In years without a February 29, we count your birthday as February 28. Some people celebrate on March 1 instead.</p></details><details><summary>Is my birth date saved?</summary><p>No. The calculation happens in your browser, and nothing is sent or stored.</p></details>
+  </div>
+  <h2>More free tools</h2><div class="related"><a class="tile" href="/cooking-converter.html"><div class="ico sage">🥄</div><h3>Cooking Converter</h3><p>Cups to grams, tablespoons to ml, and °F to °C for recipes.</p></a><a class="tile" href="/christmas-countdown.html"><div class="ico berry">🎄</div><h3>Days Until Christmas</h3><p>Live countdown to Christmas, plus Thanksgiving, Black Friday and New Year.</p></a><a class="tile" href="/turkey-calculator.html"><div class="ico gold">🦃</div><h3>Turkey Calculator</h3><p>What size turkey to buy, how long to thaw it, and when it goes in the oven.</p></a></div><p style="margin:-14px 0 30px"><a href="/">See all tools →</a></p>
+</div>
+</main>
+<footer class="site-foot"><div class="foot-in">
+  <div>© 2026 BloomCalc · Free, simple calculators for everyday life.</div>
+  <nav aria-label="Footer"><a href="/about.html">About</a><a href="/privacy.html">Privacy</a><a href="https://www.myshopportal.com/" target="_blank" rel="noopener">Deals: ShopPortal</a></nav>
+</div></footer>
+<script>
+(function(){
+  var $=function(id){return document.getElementById(id)};
+  function parse(s){if(!s)return null;var p=s.split('-');return new Date(+p[0],+p[1]-1,+p[2])}
+  function pad(n){return (n<10?'0':'')+n}
+  var t=new Date();$('on').value=t.getFullYear()+'-'+pad(t.getMonth()+1)+'-'+pad(t.getDate());
+  function bday(y,m,d){if(m===1&&d===29&&new Date(y,1,29).getMonth()!==1)return new Date(y,1,28);return new Date(y,m,d)}
+  function plural(n,w){return n+' '+w+(n===1?'':'s')}
+  function calc(){
+    var b=parse($('dob').value),o=parse($('on').value),err=$('err');err.style.display='none';
+    if(!b||!o){$('res').classList.remove('show');return}
+    if(b>o){err.textContent='The birth date is after the "age on" date. Please check the dates.';err.style.display='block';$('res').classList.remove('show');return}
+    var y=o.getFullYear()-b.getFullYear(),m=o.getMonth()-b.getMonth(),d=o.getDate()-b.getDate();
+    if(d<0){m--;d+=new Date(o.getFullYear(),o.getMonth(),0).getDate()}
+    if(m<0){y--;m+=12}
+    $('g-age').textContent=plural(y,'year')+', '+plural(m,'month')+', '+plural(d,'day');
+    var days=Math.round((o-b)/864e5);
+    $('g-days').textContent=days.toLocaleString();$('g-weeks').textContent=Math.floor(days/7).toLocaleString();
+    $('g-born').textContent=b.toLocaleDateString('en-US',{weekday:'long'});
+    var nb=bday(o.getFullYear(),b.getMonth(),b.getDate());if(nb<o)nb=bday(o.getFullYear()+1,b.getMonth(),b.getDate());
+    var left=Math.round((nb-o)/864e5),turning=nb.getFullYear()-b.getFullYear();
+    $('g-next').textContent=left===0?'🎉 Today!':left.toLocaleString();
+    $('g-next-lbl').textContent=left===0?'happy birthday!':'days until you turn '+turning;
+    $('g-note').textContent='Next birthday: '+nb.toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric',year:'numeric'})+'.';
+    $('res').classList.add('show');
+  }
+  $('dob').addEventListener('change',calc);$('on').addEventListener('change',calc);$('dob').addEventListener('input',calc);$('on').addEventListener('input',calc);
+})();
+</script>
+</body>
+</html>

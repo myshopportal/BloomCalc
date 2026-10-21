@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cooking Measurement Converter: Cups to Grams, °F to °C | BloomCalc</title>
+<meta name="description" content="Free cooking converter. Convert cups to grams for flour, sugar and butter, tablespoons to ml, ounces to grams, and oven temperatures from °F to °C.">
+<link rel="canonical" href="https://www.bloomcalc.com/cooking-converter.html">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BloomCalc">
+<meta property="og:title" content="Cooking Measurement Converter: Cups to Grams, °F to °C | BloomCalc">
+<meta property="og:description" content="Free cooking converter. Convert cups to grams for flour, sugar and butter, tablespoons to ml, ounces to grams, and oven temperatures from °F to °C.">
+<meta property="og:url" content="https://www.bloomcalc.com/cooking-converter.html">
+<meta name="theme-color" content="#fbf6f0">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How many grams are in a cup?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on the ingredient, because a cup measures volume, not weight. A cup of all-purpose flour is about 120 g, but a cup of sugar is about 198 g and a cup of butter is 227 g."}}, {"@type": "Question", "name": "How many tablespoons are in a cup?", "acceptedAnswer": {"@type": "Answer", "text": "There are 16 tablespoons in a US cup, and 3 teaspoons in a tablespoon, so 48 teaspoons in a cup."}}, {"@type": "Question", "name": "What is 350°F in Celsius?", "acceptedAnswer": {"@type": "Answer", "text": "350°F is about 177°C. Many recipes round it to 180°C, or 160°C for a fan (convection) oven."}}]}</script>
+</head>
+<body>
+<header class="site-head"><div class="head-in">
+  <a class="logo" href="/"><svg viewBox="0 0 32 32" aria-hidden="true"><g fill="#b0305a"><circle cx="16" cy="8.5" r="5.5"/><circle cx="23.5" cy="16" r="5.5"/><circle cx="16" cy="23.5" r="5.5"/><circle cx="8.5" cy="16" r="5.5"/></g><circle cx="16" cy="16" r="4.6" fill="#e8a33d"/><path d="M13.6 16h4.8M16 13.6v4.8" stroke="#2b1d2a" stroke-width="1.6" stroke-linecap="round"/></svg><span>Bloom<b>Calc</b></span></a>
+  <nav class="nav" aria-label="Main"><a href="/">All tools</a><a href="/christmas-countdown.html">🎄 Christmas</a><a href="/turkey-calculator.html">🦃 Turkey</a><a href="/discount-calculator.html">🏷️ Discount</a><a href="/tip-calculator.html">🍽️ Tip</a><a href="/gift-budget-planner.html">🎁 Gift budget</a></nav>
+</div></header>
+<main>
+<div class="narrow">
+  <div class="crumbs"><a href="/">BloomCalc</a> › Cooking converter</div>
+  <section class="page-hero">
+    <span class="eyebrow">Kitchen</span>
+    <h1>Cooking measurement converter</h1>
+    <p class="lead">Cups to grams, tablespoons to ml, ounces to grams and °F to °C, for any recipe from anywhere.</p>
+  </section>
+  <div class="card tool">
+    <div class="seg tabs" id="mode" role="tablist">
+      <button type="button" class="on" data-v="ingr">Cups↔g</button><button type="button" data-v="vol">Volume</button><button type="button" data-v="wt">Weight</button><button type="button" data-v="temp">°F/°C</button>
+    </div>
+    <div id="p-ingr">
+      <div class="fields">
+        <div><label for="i-amt">Amount</label><input id="i-amt" type="number" inputmode="decimal" min="0" value="1"></div>
+        <div><label for="i-dir">Convert</label><select id="i-dir"><option value="c2g">cups → grams</option><option value="g2c">grams → cups</option></select></div>
+        <div class="full"><label for="i-ing">Ingredient</label><select id="i-ing"><option value="120">All-purpose flour</option><option value="113">Whole wheat flour</option><option value="198">Granulated sugar</option><option value="213">Brown sugar (packed)</option><option value="113">Powdered sugar</option><option value="227">Butter</option><option value="89">Rolled oats</option><option value="198">Uncooked white rice</option><option value="84">Cocoa powder</option><option value="336">Honey</option><option value="242">Milk</option><option value="237">Water</option></select></div>
+      </div>
+      <div class="stats" style="margin-top:16px"><div class="stat hero"><b id="i-out">–</b><span id="i-lbl"></span></div></div>
+      <p class="note">Weights are typical averages. How you scoop changes it, so for baking, a kitchen scale is the most accurate.</p>
+    </div>
+    <div id="p-vol" hidden>
+      <div class="fields">
+        <div><label for="v-amt">Amount</label><input id="v-amt" type="number" inputmode="decimal" min="0" value="1"></div>
+        <div><label for="v-from">From</label><select id="v-from"><option value="236.588">cups</option><option value="14.7868">tablespoons</option><option value="4.92892">teaspoons</option><option value="29.5735">fluid ounces</option><option value="1">milliliters</option><option value="1000">liters</option><option value="473.176">pints</option><option value="946.353">quarts</option><option value="3785.41">gallons</option></select></div>
+      </div>
+      <ul class="conv-list" id="v-out"></ul>
+    </div>
+    <div id="p-wt" hidden>
+      <div class="fields">
+        <div><label for="w-amt">Amount</label><input id="w-amt" type="number" inputmode="decimal" min="0" value="1"></div>
+        <div><label for="w-from">From</label><select id="w-from"><option value="28.3495">ounces</option><option value="453.592">pounds</option><option value="1">grams</option><option value="1000">kilograms</option></select></div>
+      </div>
+      <ul class="conv-list" id="w-out"></ul>
+    </div>
+    <div id="p-temp" hidden>
+      <div class="fields">
+        <div><label for="f">°F</label><input id="f" type="number" inputmode="decimal" value="350"></div>
+        <div><label for="c">°C</label><input id="c" type="number" inputmode="decimal"></div>
+      </div>
+      <p class="note">Type in either box. For a fan (convection) oven, set about 20°C (25°F) lower.</p>
+    </div>
+  </div>
+  <div class="content">
+    <h2>Cups to grams for common ingredients</h2>
+    <div class="table-scroll"><table>
+      <thead><tr><th>Ingredient</th><th>1 cup</th><th>½ cup</th><th>¼ cup</th></tr></thead>
+      <tbody><tr><td>All-purpose flour</td><td>120 g</td><td>60 g</td><td>30 g</td></tr><tr><td>Whole wheat flour</td><td>113 g</td><td>56 g</td><td>28 g</td></tr><tr><td>Granulated sugar</td><td>198 g</td><td>99 g</td><td>50 g</td></tr><tr><td>Brown sugar (packed)</td><td>213 g</td><td>106 g</td><td>53 g</td></tr><tr><td>Powdered sugar</td><td>113 g</td><td>56 g</td><td>28 g</td></tr><tr><td>Butter</td><td>227 g</td><td>114 g</td><td>57 g</td></tr><tr><td>Rolled oats</td><td>89 g</td><td>44 g</td><td>22 g</td></tr><tr><td>Uncooked white rice</td><td>198 g</td><td>99 g</td><td>50 g</td></tr><tr><td>Cocoa powder</td><td>84 g</td><td>42 g</td><td>21 g</td></tr><tr><td>Honey</td><td>336 g</td><td>168 g</td><td>84 g</td></tr><tr><td>Milk</td><td>242 g</td><td>121 g</td><td>60 g</td></tr><tr><td>Water</td><td>237 g</td><td>118 g</td><td>59 g</td></tr></tbody>
+    </table></div>
+    <h2>Oven temperatures</h2>
+    <div class="table-scroll"><table>
+      <thead><tr><th>°F</th><th>°C</th><th>Fan oven °C</th></tr></thead>
+      <tbody><tr><td>300°F</td><td>150°C</td><td>130°C</td></tr><tr><td>325°F</td><td>165°C</td><td>145°C</td></tr><tr><td>350°F</td><td>180°C</td><td>160°C</td></tr><tr><td>375°F</td><td>190°C</td><td>170°C</td></tr><tr><td>400°F</td><td>200°C</td><td>180°C</td></tr><tr><td>425°F</td><td>220°C</td><td>200°C</td></tr><tr><td>450°F</td><td>230°C</td><td>210°C</td></tr></tbody>
+    </table></div>
+    <p class="note">Celsius values are rounded the way most recipes write them.</p>
+    <h2>Handy kitchen tools</h2>
+    <div class="shop"><div class="shop-item"><b>Digital kitchen scale</b><span>The most accurate way to measure flour and sugar.</span><a href="https://www.amazon.com/s?k=digital+kitchen+food+scale&tag=sukhleenkau0b-20" target="_blank" rel="sponsored noopener">See on Amazon →</a></div><div class="shop-item"><b>Measuring cups & spoons</b><span>A full set for US recipes.</span><a href="https://www.amazon.com/s?k=measuring+cups+and+spoons+set&tag=sukhleenkau0b-20" target="_blank" rel="sponsored noopener">See on Amazon →</a></div><div class="shop-item"><b>Oven thermometer</b><span>Many ovens run hotter or cooler than the dial.</span><a href="https://www.amazon.com/s?k=oven+thermometer&tag=sukhleenkau0b-20" target="_blank" rel="sponsored noopener">See on Amazon →</a></div></div><p class="disclose">As an Amazon Associate, BloomCalc earns from qualifying purchases. This doesn't change the price you pay.</p>
+    <h2>FAQ</h2>
+    <details><summary>How many grams are in a cup?</summary><p>It depends on the ingredient, because a cup measures volume, not weight. A cup of all-purpose flour is about 120 g, but a cup of sugar is about 198 g and a cup of butter is 227 g.</p></details><details><summary>How many tablespoons are in a cup?</summary><p>There are 16 tablespoons in a US cup, and 3 teaspoons in a tablespoon, so 48 teaspoons in a cup.</p></details><details><summary>What is 350°F in Celsius?</summary><p>350°F is about 177°C. Many recipes round it to 180°C, or 160°C for a fan (convection) oven.</p></details>
+  </div>
+  <h2>More free tools</h2><div class="related"><a class="tile" href="/age-calculator.html"><div class="ico berry">🎂</div><h3>Age Calculator</h3><p>Exact age in years, months and days, plus days until your next birthday.</p></a><a class="tile" href="/christmas-countdown.html"><div class="ico berry">🎄</div><h3>Days Until Christmas</h3><p>Live countdown to Christmas, plus Thanksgiving, Black Friday and New Year.</p></a><a class="tile" href="/turkey-calculator.html"><div class="ico gold">🦃</div><h3>Turkey Calculator</h3><p>What size turkey to buy, how long to thaw it, and when it goes in the oven.</p></a></div><p style="margin:-14px 0 30px"><a href="/">See all tools →</a></p>
+</div>
+</main>
+<footer class="site-foot"><div class="foot-in">
+  <div>© 2026 BloomCalc · Free, simple calculators for everyday life.</div>
+  <nav aria-label="Footer"><a href="/about.html">About</a><a href="/privacy.html">Privacy</a><a href="https://www.myshopportal.com/" target="_blank" rel="noopener">Deals: ShopPortal</a></nav>
+</div></footer>
+<style>
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.chip{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:7px 13px;font:inherit;font-size:14px;font-weight:600;color:var(--ink);cursor:pointer}
+.chip.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.stepper{display:flex;align-items:center;gap:8px}
+.stepper button{width:46px;height:46px;border-radius:12px;border:1.5px solid var(--line);background:#fff;font-size:22px;font-weight:700;color:var(--ink);cursor:pointer;flex:0 0 auto}
+.stepper input{text-align:center}
+.pc{border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:12px;background:#fff}
+.pc .row{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:16px}
+.pc .row input{width:110px;min-height:44px}
+.pc .ans{margin-top:10px;font-family:"Fraunces",Georgia,serif;font-size:24px;font-weight:600;color:var(--berry)}
+.pc .how{font-size:13px;color:var(--muted)}
+.tabs{margin-bottom:14px}.tabs button{white-space:nowrap;padding:9px 4px}
+.conv-list{list-style:none;padding:0;margin:14px 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.conv-list li{background:var(--bg);border-radius:12px;padding:10px 12px;display:flex;justify-content:space-between;gap:8px}
+.conv-list b{font-family:"Fraunces",Georgia,serif;font-size:18px}
+@media (max-width:520px){.conv-list{grid-template-columns:1fr}}
+</style><script>
+(function(){
+  var $=function(id){return document.getElementById(id)};
+  function f(n,d){return (Math.round(n*Math.pow(10,d))/Math.pow(10,d)).toLocaleString('en-US',{maximumFractionDigits:d})}
+  $('mode').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;[].forEach.call($('mode').children,function(x){x.classList.toggle('on',x===b)});['ingr','vol','wt','temp'].forEach(function(k){$('p-'+k).hidden=k!==b.dataset.v})});
+  function ingr(){
+    var a=+$('i-amt').value||0,g=+$('i-ing').value,name=$('i-ing').selectedOptions[0].textContent.toLowerCase();
+    if($('i-dir').value==='c2g'){$('i-out').textContent=f(a*g,0)+' g';$('i-lbl').textContent=f(a,2)+' cup'+(a===1?'':'s')+' of '+name}
+    else{var c=a/g;$('i-out').textContent=f(c,2)+' cup'+(c===1?'':'s');$('i-lbl').textContent=f(a,0)+' g of '+name+(c<0.25&&a?' (about '+f(c*16,1)+' tbsp)':'')}
+  }
+  var VOL=[['cups',236.588],['tablespoons',14.7868],['teaspoons',4.92892],['fluid ounces',29.5735],['milliliters',1],['liters',1000],['pints',473.176],['quarts',946.353],['gallons',3785.41]];
+  var WT=[['ounces',28.3495],['pounds',453.592],['grams',1],['kilograms',1000]];
+  function list(amtId,fromId,outId,units){
+    var base=(+$(amtId).value||0)*(+$(fromId).value);
+    $(outId).innerHTML=units.filter(function(u){return String(u[1])!==$(fromId).value}).map(function(u){var v=base/u[1];return '<li><span>'+u[0]+'</span><b>'+f(v,v<10?2:1)+'</b></li>'}).join('');
+  }
+  function vol(){list('v-amt','v-from','v-out',VOL)}
+  function wt(){list('w-amt','w-from','w-out',WT)}
+  $('f').addEventListener('input',function(){var v=$('f').value;$('c').value=v===''?'':Math.round((v-32)*5/9)});
+  $('c').addEventListener('input',function(){var v=$('c').value;$('f').value=v===''?'':Math.round(v*9/5+32)});
+  $('c').value=Math.round((350-32)*5/9);
+  ['i-amt','i-dir','i-ing'].forEach(function(id){$(id).addEventListener('input',ingr);$(id).addEventListener('change',ingr)});
+  ['v-amt','v-from'].forEach(function(id){$(id).addEventListener('input',vol);$(id).addEventListener('change',vol)});
+  ['w-amt','w-from'].forEach(function(id){$(id).addEventListener('input',wt);$(id).addEventListener('change',wt)});
+  ingr();vol();wt();
+})();
+</script>
+</body>
+</html>

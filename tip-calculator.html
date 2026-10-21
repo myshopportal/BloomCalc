@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tip Calculator & Bill Split: How Much to Tip | BloomCalc</title>
+<meta name="description" content="Free tip calculator. Pick 15%, 18%, 20% or your own tip, split the bill between friends, and round up each share. Includes a quick US tipping guide.">
+<link rel="canonical" href="https://www.bloomcalc.com/tip-calculator.html">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BloomCalc">
+<meta property="og:title" content="Tip Calculator & Bill Split: How Much to Tip | BloomCalc">
+<meta property="og:description" content="Free tip calculator. Pick 15%, 18%, 20% or your own tip, split the bill between friends, and round up each share. Includes a quick US tipping guide.">
+<meta property="og:url" content="https://www.bloomcalc.com/tip-calculator.html">
+<meta name="theme-color" content="#fbf6f0">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much should I tip at a restaurant?", "acceptedAnswer": {"@type": "Answer", "text": "In the US, 15–20% of the bill before tax is common for sit-down service, and many people tip 20% or more for great service."}}, {"@type": "Question", "name": "Should I tip on the total before or after tax?", "acceptedAnswer": {"@type": "Answer", "text": "Tipping on the amount before tax is the traditional way. Tipping on the total after tax is also common and just a little more generous."}}, {"@type": "Question", "name": "How do I split a bill with a tip?", "acceptedAnswer": {"@type": "Answer", "text": "Add the tip to the bill, then divide the total by the number of people. This calculator does both and can round each share up to a whole dollar."}}]}</script>
+</head>
+<body>
+<header class="site-head"><div class="head-in">
+  <a class="logo" href="/"><svg viewBox="0 0 32 32" aria-hidden="true"><g fill="#b0305a"><circle cx="16" cy="8.5" r="5.5"/><circle cx="23.5" cy="16" r="5.5"/><circle cx="16" cy="23.5" r="5.5"/><circle cx="8.5" cy="16" r="5.5"/></g><circle cx="16" cy="16" r="4.6" fill="#e8a33d"/><path d="M13.6 16h4.8M16 13.6v4.8" stroke="#2b1d2a" stroke-width="1.6" stroke-linecap="round"/></svg><span>Bloom<b>Calc</b></span></a>
+  <nav class="nav" aria-label="Main"><a href="/">All tools</a><a href="/christmas-countdown.html">🎄 Christmas</a><a href="/turkey-calculator.html">🦃 Turkey</a><a href="/discount-calculator.html">🏷️ Discount</a><a href="/tip-calculator.html" aria-current="page">🍽️ Tip</a><a href="/gift-budget-planner.html">🎁 Gift budget</a></nav>
+</div></header>
+<main>
+<div class="narrow">
+  <div class="crumbs"><a href="/">BloomCalc</a> › Tip calculator</div>
+  <section class="page-hero">
+    <span class="eyebrow">Eating out</span>
+    <h1>Tip calculator & bill split</h1>
+    <p class="lead">Enter the bill, pick a tip, and split it between everyone at the table.</p>
+  </section>
+  <div class="card tool">
+    <div class="fields">
+      <div class="full"><label for="bill">Bill amount ($)</label><input id="bill" type="number" inputmode="decimal" min="0" placeholder="e.g. 86.40"></div>
+      <div class="full"><label for="tp">Tip (%)</label><input id="tp" type="number" inputmode="decimal" min="0" max="100" value="18">
+        <div class="chips" id="tipchips"><button type="button" class="chip" data-v="15">15%</button><button type="button" class="chip" data-v="18">18%</button><button type="button" class="chip" data-v="20">20%</button><button type="button" class="chip" data-v="22">22%</button><button type="button" class="chip" data-v="25">25%</button></div></div>
+      <div><label for="ppl">Split between</label><div class="stepper"><button type="button" id="minus" aria-label="Fewer people">−</button><input id="ppl" type="number" inputmode="numeric" min="1" max="50" value="1"><button type="button" id="plus" aria-label="More people">+</button></div></div>
+      <div><label>Round each share</label><div class="seg" id="round"><button type="button" class="on" data-v="0">Exact</button><button type="button" data-v="1">Round up</button></div></div>
+    </div>
+    <div class="result show" style="display:block" aria-live="polite">
+      <div class="stats">
+        <div class="stat hero"><b id="t-each">$0.00</b><span id="t-each-lbl">total to pay</span></div>
+        <div class="stat"><b id="t-tip">$0.00</b><span>tip</span></div>
+        <div class="stat"><b id="t-total">$0.00</b><span>bill + tip</span></div>
+      </div>
+      <p class="note" id="t-note"></p>
+    </div>
+  </div>
+  <div class="content">
+    <h2>Quick US tipping guide</h2>
+    <div class="table-scroll"><table>
+      <thead><tr><th>Service</th><th>Common tip</th></tr></thead>
+      <tbody>
+        <tr><td>Sit-down restaurant</td><td>15–20%, more for great service</td></tr>
+        <tr><td>Bar</td><td>$1–2 per drink or 15–20% of the tab</td></tr>
+        <tr><td>Food delivery</td><td>15–20%, at least a few dollars</td></tr>
+        <tr><td>Hair salon / barber</td><td>15–20%</td></tr>
+        <tr><td>Taxi / rideshare</td><td>15–20%</td></tr>
+        <tr><td>Takeout counter</td><td>Optional; 10% is a kind extra</td></tr>
+      </tbody>
+    </table></div>
+    <p class="note">Customs vary by place and service. Some restaurants already add a service charge for big groups, so check the bill before adding a tip.</p>
+    <h2>Fast mental math for a 20% tip</h2>
+    <p>Move the decimal one place left to get 10%, then double it. On an $86.40 bill: 10% is $8.64, so 20% is about <b>$17.28</b>.</p>
+    <h2>FAQ</h2>
+    <details><summary>How much should I tip at a restaurant?</summary><p>In the US, 15–20% of the bill before tax is common for sit-down service, and many people tip 20% or more for great service.</p></details><details><summary>Should I tip on the total before or after tax?</summary><p>Tipping on the amount before tax is the traditional way. Tipping on the total after tax is also common and just a little more generous.</p></details><details><summary>How do I split a bill with a tip?</summary><p>Add the tip to the bill, then divide the total by the number of people. This calculator does both and can round each share up to a whole dollar.</p></details>
+  </div>
+  <h2>More free tools</h2><div class="related"><a class="tile" href="/discount-calculator.html"><div class="ico berry">🏷️</div><h3>Discount Calculator</h3><p>Sale price after % off, extra coupons and sales tax. Perfect for Black Friday.</p></a><a class="tile" href="/percentage-calculator.html"><div class="ico sage">％</div><h3>Percentage Calculator</h3><p>X% of a number, what percent one number is of another, and % change.</p></a><a class="tile" href="/christmas-countdown.html"><div class="ico berry">🎄</div><h3>Days Until Christmas</h3><p>Live countdown to Christmas, plus Thanksgiving, Black Friday and New Year.</p></a></div><p style="margin:-14px 0 30px"><a href="/">See all tools →</a></p>
+</div>
+</main>
+<footer class="site-foot"><div class="foot-in">
+  <div>© 2026 BloomCalc · Free, simple calculators for everyday life.</div>
+  <nav aria-label="Footer"><a href="/about.html">About</a><a href="/privacy.html">Privacy</a><a href="https://www.myshopportal.com/" target="_blank" rel="noopener">Deals: ShopPortal</a></nav>
+</div></footer>
+<style>
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.chip{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:7px 13px;font:inherit;font-size:14px;font-weight:600;color:var(--ink);cursor:pointer}
+.chip.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.stepper{display:flex;align-items:center;gap:8px}
+.stepper button{width:46px;height:46px;border-radius:12px;border:1.5px solid var(--line);background:#fff;font-size:22px;font-weight:700;color:var(--ink);cursor:pointer;flex:0 0 auto}
+.stepper input{text-align:center}
+.pc{border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:12px;background:#fff}
+.pc .row{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:16px}
+.pc .row input{width:110px;min-height:44px}
+.pc .ans{margin-top:10px;font-family:"Fraunces",Georgia,serif;font-size:24px;font-weight:600;color:var(--berry)}
+.pc .how{font-size:13px;color:var(--muted)}
+.tabs{margin-bottom:14px}.tabs button{white-space:nowrap;padding:9px 4px}
+.conv-list{list-style:none;padding:0;margin:14px 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.conv-list li{background:var(--bg);border-radius:12px;padding:10px 12px;display:flex;justify-content:space-between;gap:8px}
+.conv-list b{font-family:"Fraunces",Georgia,serif;font-size:18px}
+@media (max-width:520px){.conv-list{grid-template-columns:1fr}}
+</style><script>
+(function(){
+  var $=function(id){return document.getElementById(id)};var money=function(n){return '$'+(Math.round(n*100)/100).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})};
+  var roundUp=false;
+  function calc(){
+    var b=Math.max(+$('bill').value||0,0),t=Math.max(+$('tp').value||0,0),n=Math.min(Math.max(Math.floor(+$('ppl').value)||1,1),50);
+    var tip=b*t/100,total=b+tip,each=total/n,eachR=roundUp?Math.ceil(each):each;
+    $('t-tip').textContent=money(tip);$('t-total').textContent=money(total);
+    $('t-each').textContent=money(n>1?eachR:(roundUp?Math.ceil(total):total));
+    $('t-each-lbl').textContent=n>1?'each person pays ('+n+' people)':'total to pay';
+    var note='';
+    if(roundUp&&b){var paid=(n>1?eachR*n:Math.ceil(total));note='Rounded up, everyone pays '+money(paid)+' in total, so the tip becomes '+money(paid-b)+' ('+(Math.round((paid-b)/b*1000)/10)+'%).'}
+    $('t-note').textContent=note;
+    [].forEach.call(document.querySelectorAll('#tipchips .chip'),function(c){c.classList.toggle('on',c.dataset.v===String($('tp').value))});
+  }
+  $('tipchips').addEventListener('click',function(ev){var b=ev.target.closest('.chip');if(!b)return;$('tp').value=b.dataset.v;calc()});
+  $('minus').onclick=function(){$('ppl').value=Math.max((+$('ppl').value||1)-1,1);calc()};
+  $('plus').onclick=function(){$('ppl').value=Math.min((+$('ppl').value||1)+1,50);calc()};
+  $('round').addEventListener('click',function(ev){var b=ev.target.closest('button');if(!b)return;[].forEach.call($('round').children,function(x){x.classList.toggle('on',x===b)});roundUp=b.dataset.v==='1';calc()});
+  ['bill','tp','ppl'].forEach(function(id){$(id).addEventListener('input',calc)});
+  calc();
+})();
+</script>
+</body>
+</html>
