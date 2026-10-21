@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BMI Calculator for Adults: Body Mass Index & Healthy Range | BloomCalc</title>
+<meta name="description" content="Free BMI calculator for adults. Find your body mass index, what the category means, and the healthy weight range for your height, in pounds or kilograms.">
+<link rel="canonical" href="https://www.bloomcalc.com/bmi-calculator.html">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BloomCalc">
+<meta property="og:title" content="BMI Calculator for Adults: Body Mass Index & Healthy Range | BloomCalc">
+<meta property="og:description" content="Free BMI calculator for adults. Find your body mass index, what the category means, and the healthy weight range for your height, in pounds or kilograms.">
+<meta property="og:url" content="https://www.bloomcalc.com/bmi-calculator.html">
+<meta name="theme-color" content="#fdfcff">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a healthy BMI?", "acceptedAnswer": {"@type": "Answer", "text": "For most adults, a BMI between 18.5 and 24.9 is considered a healthy weight range."}}, {"@type": "Question", "name": "Is BMI accurate for muscular people?", "acceptedAnswer": {"@type": "Answer", "text": "Not always. BMI can't tell muscle from fat, so athletes and very muscular people may have a high BMI without extra body fat."}}, {"@type": "Question", "name": "Can I use this BMI calculator for my child?", "acceptedAnswer": {"@type": "Answer", "text": "No. Kids' and teens' BMI must be compared to growth charts for their age and sex. Your child's doctor can help."}}]}</script>
+</head>
+<body>
+<header class="site-head"><div class="head-in">
+  <a class="logo" href="/"><svg class="bloom" viewBox="0 0 32 32" aria-hidden="true"><g class="petals"><circle class="p" style="--dx:0px;--dy:7.5px" cx="16" cy="8.5" r="5.5" fill="#f9a8d4"/><circle class="p" style="--dx:-7.5px;--dy:0px" cx="23.5" cy="16" r="5.5" fill="#a7f3d0"/><circle class="p" style="--dx:0px;--dy:-7.5px" cx="16" cy="23.5" r="5.5" fill="#fdba74"/><circle class="p" style="--dx:7.5px;--dy:0px" cx="8.5" cy="16" r="5.5" fill="#c4b5fd"/></g><g class="core"><circle cx="16" cy="16" r="4.6" fill="#ffffff"/><path d="M13.6 16h4.8M16 13.6v4.8" stroke="#6d5bd0" stroke-width="1.6" stroke-linecap="round"/></g></svg><span>Bloom<b>Calc</b></span></a>
+  <nav class="nav" aria-label="Main"><a href="/">All tools</a><a href="/christmas-countdown.html">🎄 Christmas</a><a href="/turkey-calculator.html">🦃 Turkey</a><a href="/calorie-calculator.html">🥗 Calories</a><a href="/bmi-calculator.html" aria-current="page">💪 BMI</a><a href="/discount-calculator.html">🏷️ Discount</a></nav>
+</div></header>
+<main>
+<div class="narrow">
+  <div class="crumbs"><a href="/">BloomCalc</a> › BMI calculator</div>
+  <section class="page-hero">
+    <span class="eyebrow">Health & fitness</span>
+    <h1>BMI calculator</h1>
+    <p class="lead">Find your body mass index (BMI) and the weight range that's usually considered healthy for your height.</p>
+  </section>
+  <div class="card tool">
+    <div class="seg" id="units" style="margin-bottom:12px"><button type="button" class="on" data-u="us">lb / ft</button><button type="button" data-u="metric">kg / cm</button></div><div class="fields"><div><label>Sex</label><div class="seg" id="sex"><button type="button" class="on" data-s="f">Female</button><button type="button" data-s="m">Male</button></div></div><div><label for="age">Age</label><input id="age" type="number" inputmode="numeric" min="18" max="100" placeholder="e.g. 32"></div><div id="hUS"><label>Height</label><div class="row2"><input id="ft" type="number" inputmode="numeric" placeholder="ft" aria-label="Feet"><input id="inch" type="number" inputmode="numeric" placeholder="in" aria-label="Inches"></div></div><div id="hM" style="display:none"><label for="cm">Height (cm)</label><input id="cm" type="number" inputmode="numeric" placeholder="e.g. 165"></div><div><label for="wt" id="wtl">Weight (lb)</label><input id="wt" type="number" inputmode="decimal" placeholder="e.g. 150"></div></div>
+    <button class="btn block" id="go" type="button">Calculate</button>
+    <p class="err" id="err" role="alert"></p>
+    <div class="result" id="res" aria-live="polite"><div class="stats">
+      <div class="stat hero"><b id="r-bmi">–</b><span id="r-cat">your BMI</span></div>
+      <div class="stat" style="grid-column:1/-1"><b id="r-range">–</b><span>healthy weight range for your height (BMI 18.5–24.9)</span></div>
+    </div>
+    <div class="bmi-scale" aria-hidden="true"><div class="seg1">Under<br>18.5</div><div class="seg2">Healthy<br>18.5–24.9</div><div class="seg3">Over<br>25–29.9</div><div class="seg4">30+</div><span id="mark"></span></div>
+    <p class="note" id="r-note"></p></div>
+    <p class="note" style="margin-bottom:0">Your details are saved only on this device, so you don't have to type them again on our other health tools.</p>
+  </div>
+  <div class="content">
+    <h2>BMI categories for adults</h2>
+    <div class="table-scroll"><table><thead><tr><th>BMI</th><th>Category</th></tr></thead><tbody>
+    <tr><td>Below 18.5</td><td>Underweight</td></tr><tr><td>18.5 – 24.9</td><td>Healthy weight</td></tr>
+    <tr><td>25 – 29.9</td><td>Overweight</td></tr><tr><td>30 and above</td><td>Obesity</td></tr></tbody></table></div>
+    <h2>How BMI is calculated</h2>
+    <p>BMI = weight (kg) ÷ height (m)². In pounds and inches: BMI = 703 × weight (lb) ÷ height (in)².</p>
+    <h2>What BMI can and can't tell you</h2>
+    <p>BMI is a quick screening number, not a diagnosis. It doesn't tell muscle from fat, so very muscular people can have a high BMI while being healthy. It also doesn't show where fat is stored, and it can differ by age and ethnicity. A doctor can look at the whole picture.</p>
+    <p>This calculator is for adults 20 and older. Children's and teens' BMI is read using age- and sex-specific growth charts, so please ask your child's doctor.</p>
+    <p class="note"><b>This is an estimate, not medical advice.</b> It's meant for healthy adults and isn't designed for pregnancy, breastfeeding, athletes in heavy training, or anyone with a medical condition. For personal advice, talk to your doctor or a registered dietitian.</p>
+    <h2>FAQ</h2>
+    <details><summary>What is a healthy BMI?</summary><p>For most adults, a BMI between 18.5 and 24.9 is considered a healthy weight range.</p></details><details><summary>Is BMI accurate for muscular people?</summary><p>Not always. BMI can't tell muscle from fat, so athletes and very muscular people may have a high BMI without extra body fat.</p></details><details><summary>Can I use this BMI calculator for my child?</summary><p>No. Kids' and teens' BMI must be compared to growth charts for their age and sex. Your child's doctor can help.</p></details>
+  </div>
+  <h2>More free tools</h2><div class="related"><a class="tile sage" href="/calorie-calculator.html"><div class="ico sage">🥗</div><h3>Calorie Calculator</h3><p>Daily calories to maintain your weight, or lose or gain it slowly.</p></a><a class="tile gold" href="/tdee-calculator.html"><div class="ico gold">🔥</div><h3>TDEE Calculator</h3><p>Total calories your body uses in a day, from rest to exercise.</p></a><a class="tile berry" href="/macro-calculator.html"><div class="ico berry">🥑</div><h3>Macro Calculator</h3><p>Protein, carbs and fat in grams, per day and per meal.</p></a></div><p style="margin:-14px 0 30px"><a href="/">See all tools →</a></p>
+</div>
+</main>
+<footer class="site-foot"><div class="foot-in">
+  <div>© 2026 BloomCalc · Free, simple calculators for everyday life.</div>
+  <nav aria-label="Footer"><a href="/about.html">About</a><a href="/privacy.html">Privacy</a><a href="https://www.myshopportal.com/" target="_blank" rel="noopener">Deals: ShopPortal</a></nav>
+</div></footer>
+<style>
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.chip{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:7px 13px;font:inherit;font-size:14px;font-weight:600;color:var(--ink);cursor:pointer}
+.chip.on{background:var(--pastel);color:var(--ink);border-color:var(--pastel-dk)}
+.stepper{display:flex;align-items:center;gap:8px}
+.stepper button{width:46px;height:46px;border-radius:12px;border:1.5px solid var(--line);background:#fff;font-size:22px;font-weight:700;color:var(--ink);cursor:pointer;flex:0 0 auto}
+.stepper input{text-align:center}
+.pc{border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:12px;background:#fff}
+.pc .row{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:16px}
+.pc .row input{width:110px;min-height:44px}
+.pc .ans{margin-top:10px;font-family:"DM Sans",system-ui,sans-serif;font-size:24px;font-weight:600;color:var(--berry)}
+.pc .how{font-size:13px;color:var(--muted)}
+.tabs{margin-bottom:14px}.tabs button{white-space:nowrap;padding:9px 4px}
+.conv-list{list-style:none;padding:0;margin:14px 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.conv-list li{background:var(--soft);border-radius:12px;padding:10px 12px;display:flex;justify-content:space-between;gap:8px}
+.conv-list b{font-family:"DM Sans",system-ui,sans-serif;font-size:18px}
+@media (max-width:520px){.conv-list{grid-template-columns:1fr}}
+</style><style>.bmi-scale{position:relative;display:grid;grid-template-columns:14fr 26fr 20fr 40fr;margin:16px 0 4px;border-radius:12px;overflow:hidden;font-size:11px;font-weight:600;text-align:center;line-height:1.2}
+.bmi-scale div{padding:8px 2px;color:var(--ink)}.seg1{background:#bfdbfe}.seg2{background:#bbf0d3}.seg3{background:#fed7aa}.seg4{background:#fbcfe8}
+.bmi-scale span{position:absolute;top:-2px;width:14px;height:14px;border-radius:50%;background:var(--ink);border:3px solid #fff;left:-20px;box-shadow:0 1px 4px rgba(0,0,0,.2)}</style><script>(function(){
+var $=function(id){return document.getElementById(id)};
+var P={units:'us',sex:'f'};var KEY='bloomcalc-profile-v1';
+function segSet(id,attr,val){var box=$(id);if(!box)return;[].forEach.call(box.children,function(b){b.classList.toggle('on',b.dataset[attr]===val)})}
+function applyUnits(){var us=P.units==='us';if($('hUS')){$('hUS').style.display=us?'':'none';$('hM').style.display=us?'none':''}
+  if($('wtl')){$('wtl').textContent=us?'Weight (lb)':'Weight (kg)';$('wt').placeholder=us?'e.g. 150':'e.g. 68'}}
+function load(){try{var s=JSON.parse(localStorage.getItem(KEY)||'null');if(!s)return false;
+  P.units=s.units||'us';P.sex=s.sex||'f';segSet('units','u',P.units);segSet('sex','s',P.sex);applyUnits();
+  ['age','ft','inch','cm','wt','act'].forEach(function(k){if($(k)&&s[k]!=null&&s[k]!=='')$(k).value=s[k]});return true}catch(e){return false}}
+function save(){try{var s={units:P.units,sex:P.sex};['age','ft','inch','cm','wt','act'].forEach(function(k){if($(k))s[k]=$(k).value});localStorage.setItem(KEY,JSON.stringify(s))}catch(e){}}
+function wire(cb){
+  $('units').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;
+    var old=P.units;P.units=b.dataset.u;segSet('units','u',P.units);
+    if(old!==P.units&&$('wt')&&$('wt').value){$('wt').value=P.units==='us'?Math.round($('wt').value/0.453592):Math.round($('wt').value*0.453592)}
+    if(old!==P.units&&$('cm')){if(P.units==='metric'&&$('ft').value){$('cm').value=Math.round(((+$('ft').value||0)*12+(+$('inch').value||0))*2.54)}
+      else if(P.units==='us'&&$('cm').value){var inches=Math.round($('cm').value/2.54);$('ft').value=Math.floor(inches/12);$('inch').value=inches%12}}
+    applyUnits();});
+  $('sex').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;P.sex=b.dataset.s;segSet('sex','s',P.sex)});
+  $('go').addEventListener('click',cb);
+}
+function err(msg){var e=$('err');e.textContent=msg;e.style.display=msg?'block':'none';if(msg)$('res').classList.remove('show')}
+function read(need){
+  var o={sex:P.sex};
+  if(need.age){o.age=+$('age').value;if(!o.age||o.age<18||o.age>100)return 'Please enter an age between 18 and 100. These calculators are made for adults.'}
+  if(need.height){o.cm=P.units==='us'?((+$('ft').value||0)*12+(+$('inch').value||0))*2.54:+$('cm').value;if(!o.cm||o.cm<120||o.cm>230)return 'Please check your height.'}
+  if(need.weight){o.kg=P.units==='us'?(+$('wt').value)*0.453592:+$('wt').value;if(!o.kg||o.kg<35||o.kg>300)return 'Please check your weight.'}
+  if(need.act)o.act=+$('act').value;
+  save();return o;
+}
+function bmr(o){return 10*o.kg+6.25*o.cm-5*o.age+(o.sex==='m'?5:-161)}
+function r10(n){return Math.round(n/10)*10}
+function fmt(n){return Math.round(n).toLocaleString()}
+function show(){$('res').classList.add('show');$('res').scrollIntoView({behavior:'smooth',block:'nearest'})}
+function cat(b){return b<18.5?'Underweight':b<25?'Healthy weight':b<30?'Overweight':'Obesity'}
+function calc(){var o=read({age:1,height:1,weight:1});if(typeof o==='string')return err(o);err('');
+  if(o.age<20){err('For anyone under 20, BMI is read using age-based growth charts, so this adult calculator isn\'t the right tool. Please ask a doctor.');return}
+  var m=o.cm/100,b=Math.round(o.kg/(m*m)*10)/10,lo=18.5*m*m,hi=24.9*m*m,us=P.units==='us';
+  $('r-bmi').textContent=b.toFixed(1);$('r-cat').textContent='BMI · '+cat(b);
+  $('r-range').textContent=us?Math.round(lo/0.453592)+' – '+Math.round(hi/0.453592)+' lb':Math.round(lo)+' – '+Math.round(hi)+' kg';
+  var pos=Math.min(Math.max((b-15)/(40-15),0),1)*100;$('mark').style.left='calc('+pos+'% - 7px)';
+  $('r-note').textContent='BMI is a screening number, not a diagnosis. It doesn\'t measure muscle or where fat is stored.';
+  show()}
+wire(calc);if(load()&&$('age').value&&$('wt').value)calc();})();</script>
+</body>
+</html>

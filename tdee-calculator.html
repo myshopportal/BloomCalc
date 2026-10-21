@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TDEE Calculator: Total Daily Energy Expenditure | BloomCalc</title>
+<meta name="description" content="Free TDEE calculator. Estimate the total calories you burn each day from your BMR and activity level, and see how your TDEE changes with more or less exercise.">
+<link rel="canonical" href="https://www.bloomcalc.com/tdee-calculator.html">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BloomCalc">
+<meta property="og:title" content="TDEE Calculator: Total Daily Energy Expenditure | BloomCalc">
+<meta property="og:description" content="Free TDEE calculator. Estimate the total calories you burn each day from your BMR and activity level, and see how your TDEE changes with more or less exercise.">
+<meta property="og:url" content="https://www.bloomcalc.com/tdee-calculator.html">
+<meta name="theme-color" content="#fdfcff">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What's the difference between BMR and TDEE?", "acceptedAnswer": {"@type": "Answer", "text": "BMR is the calories you burn at complete rest. TDEE adds your daily activity on top, so it's always higher than BMR."}}, {"@type": "Question", "name": "How accurate is a TDEE calculator?", "acceptedAnswer": {"@type": "Answer", "text": "It's an estimate, usually within about 10% for most people. Watching how your weight changes over a few weeks is the best real-world check."}}, {"@type": "Question", "name": "Which activity level should I pick?", "acceptedAnswer": {"@type": "Answer", "text": "Choose the one that matches a typical week. If you're unsure, pick the lower option, since many people overestimate their activity."}}]}</script>
+</head>
+<body>
+<header class="site-head"><div class="head-in">
+  <a class="logo" href="/"><svg class="bloom" viewBox="0 0 32 32" aria-hidden="true"><g class="petals"><circle class="p" style="--dx:0px;--dy:7.5px" cx="16" cy="8.5" r="5.5" fill="#f9a8d4"/><circle class="p" style="--dx:-7.5px;--dy:0px" cx="23.5" cy="16" r="5.5" fill="#a7f3d0"/><circle class="p" style="--dx:0px;--dy:-7.5px" cx="16" cy="23.5" r="5.5" fill="#fdba74"/><circle class="p" style="--dx:7.5px;--dy:0px" cx="8.5" cy="16" r="5.5" fill="#c4b5fd"/></g><g class="core"><circle cx="16" cy="16" r="4.6" fill="#ffffff"/><path d="M13.6 16h4.8M16 13.6v4.8" stroke="#6d5bd0" stroke-width="1.6" stroke-linecap="round"/></g></svg><span>Bloom<b>Calc</b></span></a>
+  <nav class="nav" aria-label="Main"><a href="/">All tools</a><a href="/christmas-countdown.html">🎄 Christmas</a><a href="/turkey-calculator.html">🦃 Turkey</a><a href="/calorie-calculator.html">🥗 Calories</a><a href="/bmi-calculator.html">💪 BMI</a><a href="/discount-calculator.html">🏷️ Discount</a></nav>
+</div></header>
+<main>
+<div class="narrow">
+  <div class="crumbs"><a href="/">BloomCalc</a> › TDEE calculator</div>
+  <section class="page-hero">
+    <span class="eyebrow">Health & fitness</span>
+    <h1>TDEE calculator</h1>
+    <p class="lead">Estimate your total daily energy expenditure: all the calories your body uses in a day, from resting to moving.</p>
+  </section>
+  <div class="card tool">
+    <div class="seg" id="units" style="margin-bottom:12px"><button type="button" class="on" data-u="us">lb / ft</button><button type="button" data-u="metric">kg / cm</button></div><div class="fields"><div><label>Sex</label><div class="seg" id="sex"><button type="button" class="on" data-s="f">Female</button><button type="button" data-s="m">Male</button></div></div><div><label for="age">Age</label><input id="age" type="number" inputmode="numeric" min="18" max="100" placeholder="e.g. 32"></div><div id="hUS"><label>Height</label><div class="row2"><input id="ft" type="number" inputmode="numeric" placeholder="ft" aria-label="Feet"><input id="inch" type="number" inputmode="numeric" placeholder="in" aria-label="Inches"></div></div><div id="hM" style="display:none"><label for="cm">Height (cm)</label><input id="cm" type="number" inputmode="numeric" placeholder="e.g. 165"></div><div><label for="wt" id="wtl">Weight (lb)</label><input id="wt" type="number" inputmode="decimal" placeholder="e.g. 150"></div><div class="full"><label for="act">How active are you?</label><select id="act"><option value="1.2">Mostly sitting (little exercise)</option>
+<option value="1.375" selected>Light (exercise 1–3 days a week)</option>
+<option value="1.55">Moderate (exercise 3–5 days a week)</option>
+<option value="1.725">Very active (hard exercise 6–7 days)</option>
+<option value="1.9">Extra active (physical job + training)</option></select></div></div>
+    <button class="btn block" id="go" type="button">Calculate</button>
+    <p class="err" id="err" role="alert"></p>
+    <div class="result" id="res" aria-live="polite"><div class="stats">
+      <div class="stat hero"><b id="r-tdee">–</b><span>your TDEE (calories a day)</span></div>
+      <div class="stat"><b id="r-bmr">–</b><span>BMR (at rest)</span></div>
+      <div class="stat"><b id="r-move">–</b><span>from daily activity</span></div>
+    </div>
+    <div class="table-scroll" style="margin-top:14px"><table><thead><tr><th>Activity level</th><th>TDEE</th></tr></thead><tbody id="r-tbl"></tbody></table></div></div>
+    <p class="note" style="margin-bottom:0">Your details are saved only on this device, so you don't have to type them again on our other health tools.</p>
+  </div>
+  <div class="content">
+    <h2>What is TDEE?</h2>
+    <p>TDEE (total daily energy expenditure) is an estimate of all the calories you burn in a day. It's made of your <b>BMR</b> (the energy your body uses at rest) plus everything you do: walking, working, exercising, even digesting food.</p>
+    <h2>How we calculate it</h2>
+    <p>We estimate your BMR with the <b>Mifflin-St Jeor equation</b>, then multiply it by an activity factor, from 1.2 for mostly sitting to 1.9 for very physical days.</p>
+    <h2>How to use your TDEE</h2>
+    <ul><li>Eating about your TDEE tends to keep weight steady.</li>
+    <li>For gentle weight loss, many people aim for a small gap below it. Our <a href="/calorie-calculator.html">calorie calculator</a> shows safe targets.</li>
+    <li>Not sure which activity level fits? Most people with desk jobs who exercise a few times a week are "Light" or "Moderate."</li></ul>
+    <p class="note"><b>This is an estimate, not medical advice.</b> It's meant for healthy adults and isn't designed for pregnancy, breastfeeding, athletes in heavy training, or anyone with a medical condition. For personal advice, talk to your doctor or a registered dietitian.</p>
+    <h2>FAQ</h2>
+    <details><summary>What's the difference between BMR and TDEE?</summary><p>BMR is the calories you burn at complete rest. TDEE adds your daily activity on top, so it's always higher than BMR.</p></details><details><summary>How accurate is a TDEE calculator?</summary><p>It's an estimate, usually within about 10% for most people. Watching how your weight changes over a few weeks is the best real-world check.</p></details><details><summary>Which activity level should I pick?</summary><p>Choose the one that matches a typical week. If you're unsure, pick the lower option, since many people overestimate their activity.</p></details>
+  </div>
+  <h2>More free tools</h2><div class="related"><a class="tile sage" href="/calorie-calculator.html"><div class="ico sage">🥗</div><h3>Calorie Calculator</h3><p>Daily calories to maintain your weight, or lose or gain it slowly.</p></a><a class="tile lav" href="/bmi-calculator.html"><div class="ico lav">💪</div><h3>BMI Calculator</h3><p>Your body mass index and the healthy weight range for your height.</p></a><a class="tile berry" href="/macro-calculator.html"><div class="ico berry">🥑</div><h3>Macro Calculator</h3><p>Protein, carbs and fat in grams, per day and per meal.</p></a></div><p style="margin:-14px 0 30px"><a href="/">See all tools →</a></p>
+</div>
+</main>
+<footer class="site-foot"><div class="foot-in">
+  <div>© 2026 BloomCalc · Free, simple calculators for everyday life.</div>
+  <nav aria-label="Footer"><a href="/about.html">About</a><a href="/privacy.html">Privacy</a><a href="https://www.myshopportal.com/" target="_blank" rel="noopener">Deals: ShopPortal</a></nav>
+</div></footer>
+<style>
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.chip{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:7px 13px;font:inherit;font-size:14px;font-weight:600;color:var(--ink);cursor:pointer}
+.chip.on{background:var(--pastel);color:var(--ink);border-color:var(--pastel-dk)}
+.stepper{display:flex;align-items:center;gap:8px}
+.stepper button{width:46px;height:46px;border-radius:12px;border:1.5px solid var(--line);background:#fff;font-size:22px;font-weight:700;color:var(--ink);cursor:pointer;flex:0 0 auto}
+.stepper input{text-align:center}
+.pc{border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:12px;background:#fff}
+.pc .row{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:16px}
+.pc .row input{width:110px;min-height:44px}
+.pc .ans{margin-top:10px;font-family:"DM Sans",system-ui,sans-serif;font-size:24px;font-weight:600;color:var(--berry)}
+.pc .how{font-size:13px;color:var(--muted)}
+.tabs{margin-bottom:14px}.tabs button{white-space:nowrap;padding:9px 4px}
+.conv-list{list-style:none;padding:0;margin:14px 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.conv-list li{background:var(--soft);border-radius:12px;padding:10px 12px;display:flex;justify-content:space-between;gap:8px}
+.conv-list b{font-family:"DM Sans",system-ui,sans-serif;font-size:18px}
+@media (max-width:520px){.conv-list{grid-template-columns:1fr}}
+</style><script>(function(){
+var $=function(id){return document.getElementById(id)};
+var P={units:'us',sex:'f'};var KEY='bloomcalc-profile-v1';
+function segSet(id,attr,val){var box=$(id);if(!box)return;[].forEach.call(box.children,function(b){b.classList.toggle('on',b.dataset[attr]===val)})}
+function applyUnits(){var us=P.units==='us';if($('hUS')){$('hUS').style.display=us?'':'none';$('hM').style.display=us?'none':''}
+  if($('wtl')){$('wtl').textContent=us?'Weight (lb)':'Weight (kg)';$('wt').placeholder=us?'e.g. 150':'e.g. 68'}}
+function load(){try{var s=JSON.parse(localStorage.getItem(KEY)||'null');if(!s)return false;
+  P.units=s.units||'us';P.sex=s.sex||'f';segSet('units','u',P.units);segSet('sex','s',P.sex);applyUnits();
+  ['age','ft','inch','cm','wt','act'].forEach(function(k){if($(k)&&s[k]!=null&&s[k]!=='')$(k).value=s[k]});return true}catch(e){return false}}
+function save(){try{var s={units:P.units,sex:P.sex};['age','ft','inch','cm','wt','act'].forEach(function(k){if($(k))s[k]=$(k).value});localStorage.setItem(KEY,JSON.stringify(s))}catch(e){}}
+function wire(cb){
+  $('units').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;
+    var old=P.units;P.units=b.dataset.u;segSet('units','u',P.units);
+    if(old!==P.units&&$('wt')&&$('wt').value){$('wt').value=P.units==='us'?Math.round($('wt').value/0.453592):Math.round($('wt').value*0.453592)}
+    if(old!==P.units&&$('cm')){if(P.units==='metric'&&$('ft').value){$('cm').value=Math.round(((+$('ft').value||0)*12+(+$('inch').value||0))*2.54)}
+      else if(P.units==='us'&&$('cm').value){var inches=Math.round($('cm').value/2.54);$('ft').value=Math.floor(inches/12);$('inch').value=inches%12}}
+    applyUnits();});
+  $('sex').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;P.sex=b.dataset.s;segSet('sex','s',P.sex)});
+  $('go').addEventListener('click',cb);
+}
+function err(msg){var e=$('err');e.textContent=msg;e.style.display=msg?'block':'none';if(msg)$('res').classList.remove('show')}
+function read(need){
+  var o={sex:P.sex};
+  if(need.age){o.age=+$('age').value;if(!o.age||o.age<18||o.age>100)return 'Please enter an age between 18 and 100. These calculators are made for adults.'}
+  if(need.height){o.cm=P.units==='us'?((+$('ft').value||0)*12+(+$('inch').value||0))*2.54:+$('cm').value;if(!o.cm||o.cm<120||o.cm>230)return 'Please check your height.'}
+  if(need.weight){o.kg=P.units==='us'?(+$('wt').value)*0.453592:+$('wt').value;if(!o.kg||o.kg<35||o.kg>300)return 'Please check your weight.'}
+  if(need.act)o.act=+$('act').value;
+  save();return o;
+}
+function bmr(o){return 10*o.kg+6.25*o.cm-5*o.age+(o.sex==='m'?5:-161)}
+function r10(n){return Math.round(n/10)*10}
+function fmt(n){return Math.round(n).toLocaleString()}
+function show(){$('res').classList.add('show');$('res').scrollIntoView({behavior:'smooth',block:'nearest'})}
+var LV=[[1.2,'Mostly sitting'],[1.375,'Light'],[1.55,'Moderate'],[1.725,'Very active'],[1.9,'Extra active']];
+function calc(){var o=read({age:1,height:1,weight:1,act:1});if(typeof o==='string')return err(o);err('');
+  var b=bmr(o),t=b*o.act;$('r-tdee').textContent=fmt(r10(t));$('r-bmr').textContent=fmt(r10(b));$('r-move').textContent='+'+fmt(r10(t-b));
+  $('r-tbl').innerHTML=LV.map(function(l){var on=l[0]===o.act;return '<tr'+(on?' style="font-weight:700"':'')+'><td>'+l[1]+(on?' (you)':'')+'</td><td>'+fmt(r10(b*l[0]))+'</td></tr>'}).join('');
+  show()}
+wire(calc);if(load()&&$('age').value&&$('wt').value)calc();})();</script>
+</body>
+</html>

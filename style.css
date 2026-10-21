@@ -170,3 +170,13 @@ th{background:linear-gradient(90deg,#fce7f3,#ede9fe)}
 @media (min-width:721px){.hero-flower{width:150px;height:150px}.hero-flower svg{width:150px;height:150px}}
 @media (max-width:420px){.hero-flower,.hero-flower svg{width:76px;height:76px}}
 @media (prefers-reduced-motion:reduce){.bloom .p,.bloom .petals,.bloom .core{animation:none}}
+.guide-list{list-style:none;padding:0;margin:10px 0 26px;display:grid;gap:8px}
+.guide-list a{display:block;text-decoration:none;color:var(--ink);background:var(--soft);border:1.5px solid var(--line);border-radius:14px;padding:12px 14px;font-weight:600}
+.guide-list li:nth-child(5n+1) a{background:#fff0f6;border-color:var(--pink-b)}
+.guide-list li:nth-child(5n+2) a{background:#f5f3ff;border-color:var(--lav-b)}
+.guide-list li:nth-child(5n+3) a{background:#effbf4;border-color:var(--mint-b)}
+.guide-list li:nth-child(5n+4) a{background:#fff6ec;border-color:var(--peach-b)}
+.guide-list li:nth-child(5n+5) a{background:#eef6ff;border-color:var(--sky-b)}
+.guide-list a:hover{border-color:var(--berry)}
+.guide-list a::after{content:" →";color:var(--berry)}
+.row2{display:flex;gap:8px}
