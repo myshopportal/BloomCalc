@@ -14,10 +14,15 @@
 <meta property="og:url" content="https://www.bloomcalc.com/gift-budget-planner.html">
 <meta name="theme-color" content="#fdfcff">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="BloomCalc">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css">
+<script defer src="/_vercel/insights/script.js"></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much should I spend on Christmas gifts?", "acceptedAnswer": {"@type": "Answer", "text": "There's no right number. Start with what you can pay without debt, then split it by person. Many people set a bigger amount for close family and a small fixed amount for friends, teachers and coworkers."}}, {"@type": "Question", "name": "How do I stick to my gift budget?", "acceptedAnswer": {"@type": "Answer", "text": "Write your list before you shop, give each person a set amount, and update what you spent as you buy. Shopping sales like Black Friday helps your money go further."}}, {"@type": "Question", "name": "Is my list saved?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Your list is saved only in this browser on this device, so you can come back to it. We never see it. If you clear your browser data or use private browsing, it won't be kept."}}]}</script>
 </head>
 <body>
@@ -147,5 +152,6 @@
   render();
 })();
 </script>
+<script>if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("/sw.js").catch(function(){})})}</script>
 </body>
 </html>

@@ -14,10 +14,15 @@
 <meta property="og:url" content="https://www.bloomcalc.com/bmi-calculator.html">
 <meta name="theme-color" content="#fdfcff">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="BloomCalc">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css">
+<script defer src="/_vercel/insights/script.js"></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a healthy BMI?", "acceptedAnswer": {"@type": "Answer", "text": "For most adults, a BMI between 18.5 and 24.9 is considered a healthy weight range."}}, {"@type": "Question", "name": "Is BMI accurate for muscular people?", "acceptedAnswer": {"@type": "Answer", "text": "Not always. BMI can't tell muscle from fat, so athletes and very muscular people may have a high BMI without extra body fat."}}, {"@type": "Question", "name": "Can I use this BMI calculator for my child?", "acceptedAnswer": {"@type": "Answer", "text": "No. Kids' and teens' BMI must be compared to growth charts for their age and sex. Your child's doctor can help."}}]}</script>
 </head>
 <body>
@@ -128,5 +133,6 @@ function calc(){var o=read({age:1,height:1,weight:1});if(typeof o==='string')ret
   $('r-note').textContent='BMI is a screening number, not a diagnosis. It doesn\'t measure muscle or where fat is stored.';
   show()}
 wire(calc);if(load()&&$('age').value&&$('wt').value)calc();})();</script>
+<script>if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("/sw.js").catch(function(){})})}</script>
 </body>
 </html>

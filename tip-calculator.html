@@ -14,10 +14,15 @@
 <meta property="og:url" content="https://www.bloomcalc.com/tip-calculator.html">
 <meta name="theme-color" content="#fdfcff">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="BloomCalc">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css">
+<script defer src="/_vercel/insights/script.js"></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much should I tip at a restaurant?", "acceptedAnswer": {"@type": "Answer", "text": "In the US, 15–20% of the bill before tax is common for sit-down service, and many people tip 20% or more for great service."}}, {"@type": "Question", "name": "Should I tip on the total before or after tax?", "acceptedAnswer": {"@type": "Answer", "text": "Tipping on the amount before tax is the traditional way. Tipping on the total after tax is also common and just a little more generous."}}, {"@type": "Question", "name": "How do I split a bill with a tip?", "acceptedAnswer": {"@type": "Answer", "text": "Add the tip to the bill, then divide the total by the number of people. This calculator does both and can round each share up to a whole dollar."}}]}</script>
 </head>
 <body>
@@ -69,7 +74,7 @@
     <h2>FAQ</h2>
     <details><summary>How much should I tip at a restaurant?</summary><p>In the US, 15–20% of the bill before tax is common for sit-down service, and many people tip 20% or more for great service.</p></details><details><summary>Should I tip on the total before or after tax?</summary><p>Tipping on the amount before tax is the traditional way. Tipping on the total after tax is also common and just a little more generous.</p></details><details><summary>How do I split a bill with a tip?</summary><p>Add the tip to the bill, then divide the total by the number of people. This calculator does both and can round each share up to a whole dollar.</p></details>
   </div>
-  <h2>More free tools</h2><div class="related"><a class="tile lav" href="/discount-calculator.html"><div class="ico lav">🏷️</div><h3>Discount Calculator</h3><p>Sale price after % off, extra coupons and sales tax. Perfect for Black Friday.</p></a><a class="tile sage" href="/percentage-calculator.html"><div class="ico sage">％</div><h3>Percentage Calculator</h3><p>X% of a number, what percent one number is of another, and % change.</p></a><a class="tile berry" href="/christmas-countdown.html"><div class="ico berry">🎄</div><h3>Days Until Christmas</h3><p>Live countdown to Christmas, plus Thanksgiving, Black Friday and New Year.</p></a></div><p style="margin:-14px 0 30px"><a href="/">See all tools →</a></p>
+  <h2>More free tools</h2><div class="related"><a class="tile lav" href="/discount-calculator.html"><div class="ico lav">🏷️</div><h3>Discount Calculator</h3><p>Sale price after % off, extra coupons and sales tax. Perfect for Black Friday.</p></a><a class="tile sage" href="/percentage-calculator.html"><div class="ico sage">％</div><h3>Percentage Calculator</h3><p>X% of a number, what percent one number is of another, and % change.</p></a><a class="tile sky" href="/loan-calculator.html"><div class="ico sky">🏦</div><h3>Loan Calculator</h3><p>Monthly payment and total interest for a car, personal or home loan.</p></a></div><p style="margin:-14px 0 30px"><a href="/">See all tools →</a></p>
 </div>
 </main>
 <footer class="site-foot"><div class="foot-in">
@@ -116,5 +121,6 @@
   calc();
 })();
 </script>
+<script>if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("/sw.js").catch(function(){})})}</script>
 </body>
 </html>

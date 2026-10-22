@@ -14,10 +14,15 @@
 <meta property="og:url" content="https://www.bloomcalc.com/how-much-turkey-per-person.html">
 <meta name="theme-color" content="#fdfcff">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="BloomCalc">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css">
+<script defer src="/_vercel/insights/script.js"></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How big a turkey do I need for 10 people?", "acceptedAnswer": {"@type": "Answer", "text": "Plan about a 10 lb turkey for 10 people, or about 15 lb if you want leftovers."}}, {"@type": "Question", "name": "How big a turkey for 20 people?", "acceptedAnswer": {"@type": "Answer", "text": "About a 20 lb turkey, or two smaller turkeys of about 10–12 lb each, which cook faster. For leftovers, plan around 30 lb in total."}}, {"@type": "Question", "name": "Do kids count as a full serving?", "acceptedAnswer": {"@type": "Answer", "text": "Most young children eat about half an adult serving, so you can count two kids as one adult."}}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How much turkey per person?", "datePublished": "2026-10-21", "dateModified": "2026-10-21", "author": {"@type": "Organization", "name": "BloomCalc"}, "publisher": {"@type": "Organization", "name": "BloomCalc"}}</script>
 </head>
 <body>
@@ -95,5 +100,6 @@ function calc(){var g=Math.max(Math.floor(+$('g').value)||0,0);if(!g){$('o').tex
 var lb=Math.max(Math.ceil(g*lo),4);$('o').innerHTML='Buy a turkey of about <span style="color:var(--berry)">'+lb+' lb</span><small>'+(g>24?'That\'s a lot of turkey! Two smaller birds will cook more evenly.':'For '+g+' guest'+(g>1?'s':'')+(lo>1?', with leftovers.':'.')) +'</small>'}
 $('lo').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;[].forEach.call($('lo').children,function(x){x.classList.toggle('on',x===b)});lo=+b.dataset.v;calc()});
 $('g').addEventListener('input',calc);calc();})();</script>
+<script>if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("/sw.js").catch(function(){})})}</script>
 </body>
 </html>

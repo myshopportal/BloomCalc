@@ -14,10 +14,15 @@
 <meta property="og:url" content="https://www.bloomcalc.com/christmas-countdown.html">
 <meta name="theme-color" content="#fdfcff">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="BloomCalc">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css">
+<script defer src="/_vercel/insights/script.js"></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How many days until Christmas?", "acceptedAnswer": {"@type": "Answer", "text": "The countdown at the top of this page updates live, every second. Christmas Day is December 25 every year."}}, {"@type": "Question", "name": "What day of the week is Christmas 2026?", "acceptedAnswer": {"@type": "Answer", "text": "Christmas Day 2026 is on a Friday, and Christmas Eve is on Thursday, December 24."}}, {"@type": "Question", "name": "When is Thanksgiving 2026?", "acceptedAnswer": {"@type": "Answer", "text": "Thanksgiving in the US is the fourth Thursday of November. In 2026 that's Thursday, November 26. Black Friday is November 27 and Cyber Monday is November 30."}}, {"@type": "Question", "name": "How many sleeps until Christmas?", "acceptedAnswer": {"@type": "Answer", "text": "Sleeps are the number of nights left before Christmas morning. The countdown shows it under the main timer."}}]}</script>
 </head>
 <body>
@@ -123,5 +128,6 @@
   };
 })();
 </script>
+<script>if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("/sw.js").catch(function(){})})}</script>
 </body>
 </html>

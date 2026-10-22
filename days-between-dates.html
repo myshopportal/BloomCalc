@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Days Between Dates Calculator: Count Days, Weeks & Business Days | BloomCalc</title>
+<meta name="description" content="Free days between dates calculator. Count the days, weeks and business days between two dates, or add and subtract days from any date.">
+<link rel="canonical" href="https://www.bloomcalc.com/days-between-dates.html">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BloomCalc">
+<meta property="og:title" content="Days Between Dates Calculator: Count Days, Weeks & Business Days | BloomCalc">
+<meta property="og:description" content="Free days between dates calculator. Count the days, weeks and business days between two dates, or add and subtract days from any date.">
+<meta property="og:url" content="https://www.bloomcalc.com/days-between-dates.html">
+<meta name="theme-color" content="#fdfcff">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="BloomCalc">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<script defer src="/_vercel/insights/script.js"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do I count the days between two dates?", "acceptedAnswer": {"@type": "Answer", "text": "Enter both dates above. By default we count the days in between without the end date, like most date calculators. Tick \"include the end date\" to count both days."}}, {"@type": "Question", "name": "What date is 30 days from today?", "acceptedAnswer": {"@type": "Answer", "text": "Use the \"add or subtract days\" tool. Today's date is filled in for you, so just enter 30."}}, {"@type": "Question", "name": "Are holidays counted as business days?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, this calculator counts all Mondays to Fridays. Remove public holidays yourself if they fall in your range."}}]}</script>
+</head>
+<body>
+<header class="site-head"><div class="head-in">
+  <a class="logo" href="/"><svg class="bloom" viewBox="0 0 32 32" aria-hidden="true"><g class="petals"><circle class="p" style="--dx:0px;--dy:7.5px" cx="16" cy="8.5" r="5.5" fill="#f9a8d4"/><circle class="p" style="--dx:-7.5px;--dy:0px" cx="23.5" cy="16" r="5.5" fill="#a7f3d0"/><circle class="p" style="--dx:0px;--dy:-7.5px" cx="16" cy="23.5" r="5.5" fill="#fdba74"/><circle class="p" style="--dx:7.5px;--dy:0px" cx="8.5" cy="16" r="5.5" fill="#c4b5fd"/></g><g class="core"><circle cx="16" cy="16" r="4.6" fill="#ffffff"/><path d="M13.6 16h4.8M16 13.6v4.8" stroke="#6d5bd0" stroke-width="1.6" stroke-linecap="round"/></g></svg><span>Bloom<b>Calc</b></span></a>
+  <nav class="nav" aria-label="Main"><a href="/">All tools</a><a href="/christmas-countdown.html">🎄 Christmas</a><a href="/turkey-calculator.html">🦃 Turkey</a><a href="/calorie-calculator.html">🥗 Calories</a><a href="/bmi-calculator.html">💪 BMI</a><a href="/discount-calculator.html">🏷️ Discount</a></nav>
+</div></header>
+<main>
+<div class="narrow">
+  <div class="crumbs"><a href="/">BloomCalc</a> › Days between dates calculator</div>
+  <section class="page-hero">
+    <span class="eyebrow">Everyday</span>
+    <h1>Days between dates calculator</h1>
+    <p class="lead">Count the days between two dates, or find the date that's a number of days before or after another.</p>
+  </section>
+  <div class="card tool"><h3 style="margin-top:0">Count days between two dates</h3>
+    <div class="fields">
+      <div><label for="d1">Start date</label><input id="d1" type="date"></div>
+      <div><label for="d2">End date</label><input id="d2" type="date"></div>
+      <div class="full"><label><input id="inc" type="checkbox" style="width:auto;min-height:0;margin-right:6px">Include the end date (count both days)</label></div>
+    </div>
+    <div class="stats" style="margin-top:14px" aria-live="polite">
+      <div class="stat hero"><b id="r-days">–</b><span>days</span></div>
+      <div class="stat"><b id="r-wk">–</b><span>weeks + days</span></div>
+      <div class="stat"><b id="r-biz">–</b><span>business days (Mon–Fri)</span></div>
+    </div>
+    <h3 style="margin-top:26px">Add or subtract days</h3>
+    <div class="fields">
+      <div><label for="a1">From date</label><input id="a1" type="date"></div>
+      <div><label for="an">Days</label><div class="row2"><select id="as" aria-label="Add or subtract"><option value="1">+ add</option><option value="-1">− subtract</option></select><input id="an" type="number" inputmode="numeric" value="30" aria-label="Number of days"></div></div>
+    </div>
+    <div class="stats" style="margin-top:14px" aria-live="polite"><div class="stat hero"><b id="r-date">–</b><span>result date</span></div></div></div>
+  <div class="content">
+    <h2>Handy uses</h2>
+    <ul><li>How many days until a trip, wedding or due date</li>
+    <li>How many business days for shipping or a deadline</li>
+    <li>"30 days from today" for returns, trials and bills</li>
+    <li>How long ago something happened</li></ul>
+    <p>Counting down to the holidays? Try our <a href="/christmas-countdown.html">Christmas countdown</a>. Want your exact age? Use the <a href="/age-calculator.html">age calculator</a>.</p>
+    <h2>About business days</h2>
+    <p>Business days here are Monday to Friday. Public holidays aren't removed, so subtract any holidays in your range yourself.</p>
+    <h2>FAQ</h2>
+    <details><summary>How do I count the days between two dates?</summary><p>Enter both dates above. By default we count the days in between without the end date, like most date calculators. Tick "include the end date" to count both days.</p></details><details><summary>What date is 30 days from today?</summary><p>Use the "add or subtract days" tool. Today's date is filled in for you, so just enter 30.</p></details><details><summary>Are holidays counted as business days?</summary><p>Yes, this calculator counts all Mondays to Fridays. Remove public holidays yourself if they fall in your range.</p></details>
+  </div>
+  <h2>More free tools</h2><div class="related"><a class="tile berry" href="/age-calculator.html"><div class="ico berry">🎂</div><h3>Age Calculator</h3><p>Exact age in years, months and days, plus days until your next birthday.</p></a><a class="tile gold" href="/cooking-converter.html"><div class="ico gold">🥄</div><h3>Cooking Converter</h3><p>Cups to grams, tablespoons to ml, and °F to °C for recipes.</p></a><a class="tile berry" href="/christmas-countdown.html"><div class="ico berry">🎄</div><h3>Days Until Christmas</h3><p>Live countdown to Christmas, plus Thanksgiving, Black Friday and New Year.</p></a></div><p style="margin:-14px 0 30px"><a href="/">See all tools →</a></p>
+</div>
+</main>
+<footer class="site-foot"><div class="foot-in">
+  <div>© 2026 BloomCalc · Free, simple calculators for everyday life.</div>
+  <nav aria-label="Footer"><a href="/about.html">About</a><a href="/privacy.html">Privacy</a><a href="https://www.myshopportal.com/" target="_blank" rel="noopener">Deals: ShopPortal</a></nav>
+</div></footer>
+<style>
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.chip{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:7px 13px;font:inherit;font-size:14px;font-weight:600;color:var(--ink);cursor:pointer}
+.chip.on{background:var(--pastel);color:var(--ink);border-color:var(--pastel-dk)}
+.stepper{display:flex;align-items:center;gap:8px}
+.stepper button{width:46px;height:46px;border-radius:12px;border:1.5px solid var(--line);background:#fff;font-size:22px;font-weight:700;color:var(--ink);cursor:pointer;flex:0 0 auto}
+.stepper input{text-align:center}
+.pc{border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:12px;background:#fff}
+.pc .row{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:16px}
+.pc .row input{width:110px;min-height:44px}
+.pc .ans{margin-top:10px;font-family:"DM Sans",system-ui,sans-serif;font-size:24px;font-weight:600;color:var(--berry)}
+.pc .how{font-size:13px;color:var(--muted)}
+.tabs{margin-bottom:14px}.tabs button{white-space:nowrap;padding:9px 4px}
+.conv-list{list-style:none;padding:0;margin:14px 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.conv-list li{background:var(--soft);border-radius:12px;padding:10px 12px;display:flex;justify-content:space-between;gap:8px}
+.conv-list b{font-family:"DM Sans",system-ui,sans-serif;font-size:18px}
+@media (max-width:520px){.conv-list{grid-template-columns:1fr}}
+</style><script>(function(){var $=function(id){return document.getElementById(id)};var money=function(n){return '$'+(Math.round(n*100)/100).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})};function pd(s){if(!s)return null;var p=s.split('-');return new Date(+p[0],+p[1]-1,+p[2])}
+function pad(n){return (n<10?'0':'')+n}
+function iso(d){return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate())}
+var t=new Date(),t2=new Date(t.getFullYear(),t.getMonth(),t.getDate()+30);
+$('d1').value=iso(t);$('d2').value=iso(t2);$('a1').value=iso(t);
+function between(){var a=pd($('d1').value),b=pd($('d2').value);if(!a||!b){$('r-days').textContent='–';return}
+  var neg=b<a;if(neg){var x=a;a=b;b=x}
+  var days=Math.round((b-a)/864e5)+($('inc').checked?1:0);
+  var biz=0,d=new Date(a);var end=new Date(b);if($('inc').checked)end.setDate(end.getDate()+1);
+  while(d<end){var w=d.getDay();if(w>0&&w<6)biz++;d.setDate(d.getDate()+1)}
+  $('r-days').textContent=(neg?'−':'')+days.toLocaleString();
+  $('r-wk').textContent=Math.floor(days/7)+' wk '+(days%7)+' d';$('r-biz').textContent=biz.toLocaleString()}
+function add(){var a=pd($('a1').value),n=Math.floor(+$('an').value||0)*(+$('as').value);if(!a){$('r-date').textContent='–';return}
+  a.setDate(a.getDate()+n);$('r-date').textContent=a.toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric',year:'numeric'})}
+['d1','d2','inc'].forEach(function(id){$(id).addEventListener('input',between);$(id).addEventListener('change',between)});
+['a1','an','as'].forEach(function(id){$(id).addEventListener('input',add);$(id).addEventListener('change',add)});
+between();add();})();</script>
+<script>if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("/sw.js").catch(function(){})})}</script>
+</body>
+</html>

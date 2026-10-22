@@ -14,10 +14,15 @@
 <meta property="og:url" content="https://www.bloomcalc.com/thanksgiving-food-per-person.html">
 <meta name="theme-color" content="#fdfcff">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="BloomCalc">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css">
+<script defer src="/_vercel/insights/script.js"></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much mashed potatoes per person?", "acceptedAnswer": {"@type": "Answer", "text": "Plan about ½ lb of raw potatoes per person for mashed potatoes."}}, {"@type": "Question", "name": "How many pies for 12 people?", "acceptedAnswer": {"@type": "Answer", "text": "A 9-inch pie serves about 8, so plan 2 pies for 12 people, or 3 if you want choices or leftovers."}}, {"@type": "Question", "name": "How much stuffing per person?", "acceptedAnswer": {"@type": "Answer", "text": "About ¾ cup of cooked stuffing per person."}}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How much food do you need for Thanksgiving?", "datePublished": "2026-10-21", "dateModified": "2026-10-21", "author": {"@type": "Organization", "name": "BloomCalc"}, "publisher": {"@type": "Organization", "name": "BloomCalc"}}</script>
 </head>
 <body>
@@ -93,5 +98,6 @@ function nice(v){return v<1?(Math.round(v*4)/4):(v<10?Math.round(v*2)/2:Math.rou
 function calc(){var g=Math.max(Math.floor(+$('g').value)||0,0);if(!g){$('o').textContent='Enter the number of guests.';return}
 $('o').innerHTML='<b>For '+g+' guest'+(g>1?'s':'')+':</b><br>'+F.map(function(f){var v=f[1]*g;if(f[2]==='roll'||f[2]==='pie')v=Math.ceil(v);else v=nice(v);return '• '+f[0]+': <b>'+v+' '+(v===1?f[2]:f[3])+'</b>'}).join('<br>')}
 $('g').addEventListener('input',calc);calc();})();</script>
+<script>if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("/sw.js").catch(function(){})})}</script>
 </body>
 </html>

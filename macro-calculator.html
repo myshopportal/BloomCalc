@@ -14,10 +14,15 @@
 <meta property="og:url" content="https://www.bloomcalc.com/macro-calculator.html">
 <meta name="theme-color" content="#fdfcff">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="BloomCalc">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css">
+<script defer src="/_vercel/insights/script.js"></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a good macro split?", "acceptedAnswer": {"@type": "Answer", "text": "A balanced split like 25% protein, 50% carbs and 25% fat fits most healthy adults and sits within US dietary guideline ranges."}}, {"@type": "Question", "name": "How many grams of protein do I need?", "acceptedAnswer": {"@type": "Answer", "text": "Many adults need roughly 0.8 g of protein per kg of body weight as a minimum. Active people often eat more. See the protein number in your results."}}, {"@type": "Question", "name": "Do I have to hit my macros exactly?", "acceptedAnswer": {"@type": "Answer", "text": "No. Treat them as a rough guide. Getting close most days, with plenty of whole foods, matters more than exact numbers."}}]}</script>
 </head>
 <body>
@@ -137,5 +142,6 @@ function calc(){var o=read({age:1,height:1,weight:1,act:1});if(typeof o==='strin
   $('r-floor').textContent=fl?(t>=min?'We don\'t go below '+min.toLocaleString()+' calories a day, since eating less than that without a doctor\'s guidance isn\'t recommended.':'Your daily needs are already on the low side, so these macros are for maintaining. Please talk to a doctor or dietitian before trying to lose weight.'):'';
   show()}
 wire(calc);if(load()&&$('age').value&&$('wt').value)calc();})();</script>
+<script>if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("/sw.js").catch(function(){})})}</script>
 </body>
 </html>

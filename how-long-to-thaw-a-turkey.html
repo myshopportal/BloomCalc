@@ -14,10 +14,15 @@
 <meta property="og:url" content="https://www.bloomcalc.com/how-long-to-thaw-a-turkey.html">
 <meta name="theme-color" content="#fdfcff">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="BloomCalc">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css">
+<script defer src="/_vercel/insights/script.js"></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How long to thaw a 20 lb turkey?", "acceptedAnswer": {"@type": "Answer", "text": "About 4–5 days in the fridge, or about 10 hours in cold water."}}, {"@type": "Question", "name": "How long to thaw a 12 lb turkey?", "acceptedAnswer": {"@type": "Answer", "text": "About 3 days in the fridge, or about 6 hours in cold water."}}, {"@type": "Question", "name": "Can I refreeze a thawed turkey?", "acceptedAnswer": {"@type": "Answer", "text": "A turkey thawed in the fridge can be refrozen, though it may lose some quality. A turkey thawed in cold water should be cooked right away, not refrozen."}}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How long to thaw a turkey", "datePublished": "2026-10-21", "dateModified": "2026-10-21", "author": {"@type": "Organization", "name": "BloomCalc"}, "publisher": {"@type": "Organization", "name": "BloomCalc"}}</script>
 </head>
 <body>
@@ -103,5 +108,6 @@
 function calc(){var w=+$('w').value||0;if(w<4){$('o').textContent='Enter a weight of at least 4 lb.';return}
 var lo=Math.ceil(w/5),hi=Math.ceil(w/4);$('o').innerHTML='Fridge: about '+(lo===hi?hi:lo+'–'+hi)+' days<small>Cold water: about '+hm(w*0.5)+' (change the water every 30 minutes)</small>'}
 $('w').addEventListener('input',calc);calc();})();</script>
+<script>if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("/sw.js").catch(function(){})})}</script>
 </body>
 </html>

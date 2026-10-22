@@ -14,10 +14,15 @@
 <meta property="og:url" content="https://www.bloomcalc.com/how-long-to-cook-a-turkey.html">
 <meta name="theme-color" content="#fdfcff">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="BloomCalc">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css">
+<script defer src="/_vercel/insights/script.js"></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How long to cook a 20 lb turkey?", "acceptedAnswer": {"@type": "Answer", "text": "At 325°F, an unstuffed 20 lb turkey takes about 4¼–4½ hours, or 4½–5 hours if it's on the 20–24 lb end. Stuffed, allow about 4¼–4¾ hours."}}, {"@type": "Question", "name": "How many minutes per pound for turkey?", "acceptedAnswer": {"@type": "Answer", "text": "Roughly 13–15 minutes per pound for an unstuffed turkey at 325°F, but the weight chart is more accurate, and a thermometer is the only sure test."}}, {"@type": "Question", "name": "Should I cook my turkey at 350°F instead?", "acceptedAnswer": {"@type": "Answer", "text": "You can roast at 325°F or higher. The USDA chart times are for 325°F. A hotter oven cooks faster, so check the temperature earlier."}}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How long to cook a turkey", "datePublished": "2026-10-21", "dateModified": "2026-10-21", "author": {"@type": "Organization", "name": "BloomCalc"}, "publisher": {"@type": "Organization", "name": "BloomCalc"}}</script>
 </head>
 <body>
@@ -95,5 +100,6 @@ if(st&&w<6){$('o').textContent='Turkeys under 6 lb are usually breasts and aren\
 var r=row(st?ST:UN,w);$('o').innerHTML='About '+hm(r[1])+' – '+hm(r[2])+' at 325°F<small>'+(st?'Stuffed':'Not stuffed')+', fully thawed. Rest 20 minutes before carving.'+(w>24?' The USDA chart stops at 24 lb, so a bigger bird may need longer.':'')+'</small>'}
 $('st').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;[].forEach.call($('st').children,function(x){x.classList.toggle('on',x===b)});st=+b.dataset.v;calc()});
 $('w').addEventListener('input',calc);calc();})();</script>
+<script>if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("/sw.js").catch(function(){})})}</script>
 </body>
 </html>

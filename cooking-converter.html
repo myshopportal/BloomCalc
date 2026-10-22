@@ -14,10 +14,15 @@
 <meta property="og:url" content="https://www.bloomcalc.com/cooking-converter.html">
 <meta name="theme-color" content="#fdfcff">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="BloomCalc">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css">
+<script defer src="/_vercel/insights/script.js"></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How many grams are in a cup?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on the ingredient, because a cup measures volume, not weight. A cup of all-purpose flour is about 120 g, but a cup of sugar is about 198 g and a cup of butter is 227 g."}}, {"@type": "Question", "name": "How many tablespoons are in a cup?", "acceptedAnswer": {"@type": "Answer", "text": "There are 16 tablespoons in a US cup, and 3 teaspoons in a tablespoon, so 48 teaspoons in a cup."}}, {"@type": "Question", "name": "What is 350°F in Celsius?", "acceptedAnswer": {"@type": "Answer", "text": "350°F is about 177°C. Many recipes round it to 180°C, or 160°C for a fan (convection) oven."}}]}</script>
 </head>
 <body>
@@ -85,7 +90,7 @@
     <h2>FAQ</h2>
     <details><summary>How many grams are in a cup?</summary><p>It depends on the ingredient, because a cup measures volume, not weight. A cup of all-purpose flour is about 120 g, but a cup of sugar is about 198 g and a cup of butter is 227 g.</p></details><details><summary>How many tablespoons are in a cup?</summary><p>There are 16 tablespoons in a US cup, and 3 teaspoons in a tablespoon, so 48 teaspoons in a cup.</p></details><details><summary>What is 350°F in Celsius?</summary><p>350°F is about 177°C. Many recipes round it to 180°C, or 160°C for a fan (convection) oven.</p></details>
   </div>
-  <h2>More free tools</h2><div class="related"><a class="tile berry" href="/age-calculator.html"><div class="ico berry">🎂</div><h3>Age Calculator</h3><p>Exact age in years, months and days, plus days until your next birthday.</p></a><a class="tile berry" href="/christmas-countdown.html"><div class="ico berry">🎄</div><h3>Days Until Christmas</h3><p>Live countdown to Christmas, plus Thanksgiving, Black Friday and New Year.</p></a><a class="tile gold" href="/turkey-calculator.html"><div class="ico gold">🦃</div><h3>Turkey Calculator</h3><p>What size turkey to buy, how long to thaw it, and when it goes in the oven.</p></a></div><p style="margin:-14px 0 30px"><a href="/">See all tools →</a></p>
+  <h2>More free tools</h2><div class="related"><a class="tile berry" href="/age-calculator.html"><div class="ico berry">🎂</div><h3>Age Calculator</h3><p>Exact age in years, months and days, plus days until your next birthday.</p></a><a class="tile lav" href="/days-between-dates.html"><div class="ico lav">📅</div><h3>Days Between Dates</h3><p>Days, weeks and business days between dates, or add days to a date.</p></a><a class="tile berry" href="/christmas-countdown.html"><div class="ico berry">🎄</div><h3>Days Until Christmas</h3><p>Live countdown to Christmas, plus Thanksgiving, Black Friday and New Year.</p></a></div><p style="margin:-14px 0 30px"><a href="/">See all tools →</a></p>
 </div>
 </main>
 <footer class="site-foot"><div class="foot-in">
@@ -136,5 +141,6 @@
   ingr();vol();wt();
 })();
 </script>
+<script>if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("/sw.js").catch(function(){})})}</script>
 </body>
 </html>

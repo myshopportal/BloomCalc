@@ -14,10 +14,15 @@
 <meta property="og:url" content="https://www.bloomcalc.com/percentage-calculator.html">
 <meta name="theme-color" content="#fdfcff">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="BloomCalc">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css">
+<script defer src="/_vercel/insights/script.js"></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do I find a percentage of a number?", "acceptedAnswer": {"@type": "Answer", "text": "Turn the percent into a decimal and multiply. 15% of 240 is 0.15 × 240 = 36."}}, {"@type": "Question", "name": "How do I work out what percent one number is of another?", "acceptedAnswer": {"@type": "Answer", "text": "Divide the part by the whole, then multiply by 100. 45 out of 60 is 45 ÷ 60 × 100 = 75%."}}, {"@type": "Question", "name": "How do I calculate percentage change?", "acceptedAnswer": {"@type": "Answer", "text": "Subtract the old value from the new value, divide by the old value, then multiply by 100. From 50 to 65 is (65 − 50) ÷ 50 × 100 = a 30% increase."}}]}</script>
 </head>
 <body>
@@ -55,7 +60,7 @@
     <h2>FAQ</h2>
     <details><summary>How do I find a percentage of a number?</summary><p>Turn the percent into a decimal and multiply. 15% of 240 is 0.15 × 240 = 36.</p></details><details><summary>How do I work out what percent one number is of another?</summary><p>Divide the part by the whole, then multiply by 100. 45 out of 60 is 45 ÷ 60 × 100 = 75%.</p></details><details><summary>How do I calculate percentage change?</summary><p>Subtract the old value from the new value, divide by the old value, then multiply by 100. From 50 to 65 is (65 − 50) ÷ 50 × 100 = a 30% increase.</p></details>
   </div>
-  <h2>More free tools</h2><div class="related"><a class="tile lav" href="/discount-calculator.html"><div class="ico lav">🏷️</div><h3>Discount Calculator</h3><p>Sale price after % off, extra coupons and sales tax. Perfect for Black Friday.</p></a><a class="tile sky" href="/tip-calculator.html"><div class="ico sky">🍽️</div><h3>Tip & Bill Split</h3><p>Work out the tip and split the bill fairly between friends.</p></a><a class="tile berry" href="/christmas-countdown.html"><div class="ico berry">🎄</div><h3>Days Until Christmas</h3><p>Live countdown to Christmas, plus Thanksgiving, Black Friday and New Year.</p></a></div><p style="margin:-14px 0 30px"><a href="/">See all tools →</a></p>
+  <h2>More free tools</h2><div class="related"><a class="tile lav" href="/discount-calculator.html"><div class="ico lav">🏷️</div><h3>Discount Calculator</h3><p>Sale price after % off, extra coupons and sales tax. Perfect for Black Friday.</p></a><a class="tile sky" href="/tip-calculator.html"><div class="ico sky">🍽️</div><h3>Tip & Bill Split</h3><p>Work out the tip and split the bill fairly between friends.</p></a><a class="tile sky" href="/loan-calculator.html"><div class="ico sky">🏦</div><h3>Loan Calculator</h3><p>Monthly payment and total interest for a car, personal or home loan.</p></a></div><p style="margin:-14px 0 30px"><a href="/">See all tools →</a></p>
 </div>
 </main>
 <footer class="site-foot"><div class="foot-in">
@@ -96,5 +101,6 @@
   ['a1','a2','b1','b2','c1','c2'].forEach(function(id){$(id).addEventListener('input',calc)});
 })();
 </script>
+<script>if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("/sw.js").catch(function(){})})}</script>
 </body>
 </html>

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Loan Calculator: Monthly Payment & Total Interest | BloomCalc</title>
+<meta name="description" content="Free loan calculator. Find your monthly payment, total interest and total cost for a car loan, personal loan or mortgage, with a year-by-year balance table.">
+<link rel="canonical" href="https://www.bloomcalc.com/loan-calculator.html">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BloomCalc">
+<meta property="og:title" content="Loan Calculator: Monthly Payment & Total Interest | BloomCalc">
+<meta property="og:description" content="Free loan calculator. Find your monthly payment, total interest and total cost for a car loan, personal loan or mortgage, with a year-by-year balance table.">
+<meta property="og:url" content="https://www.bloomcalc.com/loan-calculator.html">
+<meta name="theme-color" content="#fdfcff">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="BloomCalc">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<script defer src="/_vercel/insights/script.js"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do I calculate a monthly loan payment?", "acceptedAnswer": {"@type": "Answer", "text": "Use the formula Payment = P × r × (1 + r)ⁿ ÷ ((1 + r)ⁿ − 1), with r the monthly rate and n the number of payments. Or just enter your numbers above."}}, {"@type": "Question", "name": "What is APR?", "acceptedAnswer": {"@type": "Answer", "text": "APR (annual percentage rate) is the yearly cost of borrowing, shown as a percent. Monthly interest is roughly APR ÷ 12."}}, {"@type": "Question", "name": "Is it better to choose a longer loan?", "acceptedAnswer": {"@type": "Answer", "text": "A longer loan lowers your monthly payment but usually costs more interest in total. A shorter loan costs less overall if you can afford the payment."}}]}</script>
+</head>
+<body>
+<header class="site-head"><div class="head-in">
+  <a class="logo" href="/"><svg class="bloom" viewBox="0 0 32 32" aria-hidden="true"><g class="petals"><circle class="p" style="--dx:0px;--dy:7.5px" cx="16" cy="8.5" r="5.5" fill="#f9a8d4"/><circle class="p" style="--dx:-7.5px;--dy:0px" cx="23.5" cy="16" r="5.5" fill="#a7f3d0"/><circle class="p" style="--dx:0px;--dy:-7.5px" cx="16" cy="23.5" r="5.5" fill="#fdba74"/><circle class="p" style="--dx:7.5px;--dy:0px" cx="8.5" cy="16" r="5.5" fill="#c4b5fd"/></g><g class="core"><circle cx="16" cy="16" r="4.6" fill="#ffffff"/><path d="M13.6 16h4.8M16 13.6v4.8" stroke="#6d5bd0" stroke-width="1.6" stroke-linecap="round"/></g></svg><span>Bloom<b>Calc</b></span></a>
+  <nav class="nav" aria-label="Main"><a href="/">All tools</a><a href="/christmas-countdown.html">🎄 Christmas</a><a href="/turkey-calculator.html">🦃 Turkey</a><a href="/calorie-calculator.html">🥗 Calories</a><a href="/bmi-calculator.html">💪 BMI</a><a href="/discount-calculator.html">🏷️ Discount</a></nav>
+</div></header>
+<main>
+<div class="narrow">
+  <div class="crumbs"><a href="/">BloomCalc</a> › Loan calculator</div>
+  <section class="page-hero">
+    <span class="eyebrow">Money</span>
+    <h1>Loan calculator</h1>
+    <p class="lead">See your monthly payment and how much interest you'll pay in total, for a car loan, personal loan or mortgage.</p>
+  </section>
+  <div class="card tool"><div class="fields">
+      <div class="full"><label for="amt">Loan amount ($)</label><input id="amt" type="number" inputmode="decimal" min="0" value="20000"></div>
+      <div><label for="rate">Interest rate (APR %)</label><input id="rate" type="number" inputmode="decimal" min="0" max="40" step="0.01" value="7"></div>
+      <div><label for="term">Loan term</label><div class="row2"><input id="term" type="number" inputmode="numeric" min="1" value="5" aria-label="Term length"><select id="unit" aria-label="Term unit"><option value="y">years</option><option value="m">months</option></select></div></div>
+    </div>
+    <p class="err" id="err" role="alert"></p>
+    <div class="result show" style="display:block" aria-live="polite">
+      <div class="stats">
+        <div class="stat hero"><b id="l-pay">–</b><span>monthly payment</span></div>
+        <div class="stat"><b id="l-int">–</b><span>total interest</span></div>
+        <div class="stat"><b id="l-tot">–</b><span>total you'll pay</span></div>
+      </div>
+      <div class="table-scroll" style="margin-top:14px"><table><thead><tr><th>Year</th><th>Interest paid</th><th>Balance left</th></tr></thead><tbody id="l-tbl"></tbody></table></div>
+      <p class="note">Estimate only. It doesn't include fees, taxes or insurance. Your lender's numbers may differ slightly.</p>
+    </div></div>
+  <div class="content">
+    <h2>How the monthly payment is calculated</h2>
+    <p>Most car loans, personal loans and mortgages use this standard formula:</p>
+    <p><b>Payment = P × r × (1 + r)ⁿ ÷ ((1 + r)ⁿ − 1)</b></p>
+    <p>where P is the loan amount, r is the monthly interest rate (APR ÷ 12) and n is the number of monthly payments.</p>
+    <h2>Ways to pay less interest</h2>
+    <ul><li><b>Shorter term:</b> higher monthly payments, but much less interest in total.</li>
+    <li><b>Lower rate:</b> compare offers. Even 1% lower can save hundreds or thousands.</li>
+    <li><b>Extra payments:</b> paying a little extra each month cuts the balance faster (check that your loan has no prepayment fee).</li>
+    <li><b>Bigger down payment:</b> borrow less, pay less interest.</li></ul>
+    <h2>FAQ</h2>
+    <details><summary>How do I calculate a monthly loan payment?</summary><p>Use the formula Payment = P × r × (1 + r)ⁿ ÷ ((1 + r)ⁿ − 1), with r the monthly rate and n the number of payments. Or just enter your numbers above.</p></details><details><summary>What is APR?</summary><p>APR (annual percentage rate) is the yearly cost of borrowing, shown as a percent. Monthly interest is roughly APR ÷ 12.</p></details><details><summary>Is it better to choose a longer loan?</summary><p>A longer loan lowers your monthly payment but usually costs more interest in total. A shorter loan costs less overall if you can afford the payment.</p></details>
+  </div>
+  <h2>More free tools</h2><div class="related"><a class="tile lav" href="/discount-calculator.html"><div class="ico lav">🏷️</div><h3>Discount Calculator</h3><p>Sale price after % off, extra coupons and sales tax. Perfect for Black Friday.</p></a><a class="tile sky" href="/tip-calculator.html"><div class="ico sky">🍽️</div><h3>Tip & Bill Split</h3><p>Work out the tip and split the bill fairly between friends.</p></a><a class="tile sage" href="/percentage-calculator.html"><div class="ico sage">％</div><h3>Percentage Calculator</h3><p>X% of a number, what percent one number is of another, and % change.</p></a></div><p style="margin:-14px 0 30px"><a href="/">See all tools →</a></p>
+</div>
+</main>
+<footer class="site-foot"><div class="foot-in">
+  <div>© 2026 BloomCalc · Free, simple calculators for everyday life.</div>
+  <nav aria-label="Footer"><a href="/about.html">About</a><a href="/privacy.html">Privacy</a><a href="https://www.myshopportal.com/" target="_blank" rel="noopener">Deals: ShopPortal</a></nav>
+</div></footer>
+<style>
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.chip{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:7px 13px;font:inherit;font-size:14px;font-weight:600;color:var(--ink);cursor:pointer}
+.chip.on{background:var(--pastel);color:var(--ink);border-color:var(--pastel-dk)}
+.stepper{display:flex;align-items:center;gap:8px}
+.stepper button{width:46px;height:46px;border-radius:12px;border:1.5px solid var(--line);background:#fff;font-size:22px;font-weight:700;color:var(--ink);cursor:pointer;flex:0 0 auto}
+.stepper input{text-align:center}
+.pc{border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:12px;background:#fff}
+.pc .row{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:16px}
+.pc .row input{width:110px;min-height:44px}
+.pc .ans{margin-top:10px;font-family:"DM Sans",system-ui,sans-serif;font-size:24px;font-weight:600;color:var(--berry)}
+.pc .how{font-size:13px;color:var(--muted)}
+.tabs{margin-bottom:14px}.tabs button{white-space:nowrap;padding:9px 4px}
+.conv-list{list-style:none;padding:0;margin:14px 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.conv-list li{background:var(--soft);border-radius:12px;padding:10px 12px;display:flex;justify-content:space-between;gap:8px}
+.conv-list b{font-family:"DM Sans",system-ui,sans-serif;font-size:18px}
+@media (max-width:520px){.conv-list{grid-template-columns:1fr}}
+</style><script>(function(){var $=function(id){return document.getElementById(id)};var money=function(n){return '$'+(Math.round(n*100)/100).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})};function calc(){
+  var P=+$('amt').value||0,apr=+$('rate').value||0,t=Math.floor(+$('term').value)||0,n=$('unit').value==='y'?t*12:t,e=$('err');e.style.display='none';
+  if(!P||!n){['l-pay','l-int','l-tot'].forEach(function(i){$(i).textContent='–'});$('l-tbl').innerHTML='';return}
+  if(n>600){e.textContent='Please choose a term of 50 years or less.';e.style.display='block';return}
+  var r=apr/100/12,pay=r?P*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1):P/n;
+  $('l-pay').textContent=money(pay);$('l-int').textContent=money(pay*n-P);$('l-tot').textContent=money(pay*n);
+  var bal=P,rows=[],yi=0;for(var m=1;m<=n;m++){var it=bal*r;yi+=it;bal=bal-(pay-it);if(m%12===0||m===n){rows.push('<tr><td>'+Math.ceil(m/12)+'</td><td>'+money(yi)+'</td><td>'+money(Math.max(bal,0))+'</td></tr>');yi=0}}
+  $('l-tbl').innerHTML=rows.join('');
+}
+['amt','rate','term'].forEach(function(id){$(id).addEventListener('input',calc)});$('unit').addEventListener('change',calc);calc();})();</script>
+<script>if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("/sw.js").catch(function(){})})}</script>
+</body>
+</html>

@@ -14,10 +14,15 @@
 <meta property="og:url" content="https://www.bloomcalc.com/cooking-a-frozen-turkey.html">
 <meta name="theme-color" content="#fdfcff">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="BloomCalc">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css">
+<script defer src="/_vercel/insights/script.js"></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is it safe to cook a turkey from frozen?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The USDA says it's safe to cook a frozen turkey in the oven. It just takes at least 50% longer."}}, {"@type": "Question", "name": "How long to cook a frozen 20 lb turkey?", "acceptedAnswer": {"@type": "Answer", "text": "A thawed 20 lb turkey takes about 4¼–4½ hours at 325°F, so frozen, allow at least 6½–6¾ hours. Check with a thermometer."}}, {"@type": "Question", "name": "Can I cook a partly frozen turkey?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. It will take longer than a fully thawed one. Check all three spots reach 165°F."}}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Can you cook a frozen turkey?", "datePublished": "2026-10-21", "dateModified": "2026-10-21", "author": {"@type": "Organization", "name": "BloomCalc"}, "publisher": {"@type": "Organization", "name": "BloomCalc"}}</script>
 </head>
 <body>
@@ -95,5 +100,6 @@
 function calc(){var w=+$('w').value||0;if(w<4){$('o').textContent='Enter a weight of at least 4 lb.';return}
 var r=row(UN,w);$('o').innerHTML='At least '+hm(r[1]*1.5)+' – '+hm(r[2]*1.5)+' at 325°F<small>That\'s 50% more than a thawed '+w+' lb turkey ('+hm(r[1])+' – '+hm(r[2])+'). Not stuffed.</small>'}
 $('w').addEventListener('input',calc);calc();})();</script>
+<script>if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("/sw.js").catch(function(){})})}</script>
 </body>
 </html>

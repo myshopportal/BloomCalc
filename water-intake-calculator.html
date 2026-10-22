@@ -14,10 +14,15 @@
 <meta property="og:url" content="https://www.bloomcalc.com/water-intake-calculator.html">
 <meta name="theme-color" content="#fdfcff">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="BloomCalc">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css">
+<script defer src="/_vercel/insights/script.js"></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How many cups of water should I drink a day?", "acceptedAnswer": {"@type": "Answer", "text": "Many adults need about 9 cups (women) to 13 cups (men) of fluids from drinks a day, more if you exercise or it's hot. Use the calculator for your estimate."}}, {"@type": "Question", "name": "Does coffee or tea count toward water intake?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Coffee, tea, milk and other drinks all count toward your daily fluids, though plain water is the best everyday choice."}}, {"@type": "Question", "name": "Can you drink too much water?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, though it's rare. Drinking very large amounts quickly can be dangerous. Spread your drinks through the day and follow your thirst."}}]}</script>
 </head>
 <body>
@@ -133,5 +138,6 @@ function calc(){var o=read({age:1});if(typeof o==='string')return err(o);err('')
 $('units').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;P.units=b.dataset.u;segSet('units','u',P.units);if($('res').classList.contains('show'))calc()});
 $('sex').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;P.sex=b.dataset.s;segSet('sex','s',P.sex)});
 $('go').addEventListener('click',calc);if(load()&&$('age').value)calc();})();</script>
+<script>if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("/sw.js").catch(function(){})})}</script>
 </body>
 </html>
